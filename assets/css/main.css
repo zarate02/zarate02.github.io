@@ -40,8 +40,8 @@
     quotes: "\201C""\201D""\2018""\2019"; }
 
   .wrapper {
-    max-width: 80%;
-    margin: 60px auto; }
+    max-width: 90%;
+    margin: 20px auto; }
  
   table {
     border-collapse: collapse;
@@ -160,7 +160,7 @@
   
   .about {
     color: #828282;
-    text-align: center;
+    #text-align: center;
     line-height: 24px; }
 
   .about__devider {
