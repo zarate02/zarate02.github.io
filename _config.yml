@@ -1,0 +1,51 @@
+title: MyonBot0.1
+short_logo: MyonBot
+description: > 
+  MyongBot is deepleran stock predict programe
+url: "https://zarate02.github.io"
+
+author:
+  name: zaimy
+  github: zarate02 
+  linkedin: # Your LinkedIn profile url name, used for LinkedIn icon on the top right
+  email: zaimyon@gmail.com
+  homepage: https://zarate02.github.io
+  twitter: # Twitter username, used for Twitter Card Analytics 
+
+#disqus_name: # Setting this will turn on Disqus comments
+#g_track_id: # Google Analytics tracking ID (e.g. UA-000000-2), setting this will turn on Google Analytics
+
+markdown: kramdown
+
+defaults: # Recommended defaults, you may set your own
+  -
+    scope:
+      path: _posts
+    values:
+      comments: true
+  -
+    scope:
+      path: pages/redirects
+    values:
+      layout: redirect
+      index: false
+      listed: false
+  -
+    scope:
+      path: pages/tags
+    values:
+      layout: tag
+      sitemap:
+        priority: 0.4
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: true
+  profile: false
+  startings: [html, head, body]
+
+#rss: true # RSS feed icon on or off

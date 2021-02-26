@@ -1,0 +1,22 @@
+---
+layout: page
+full_logo: true
+title: 
+subtitle: 
+description: myonbotMain
+sitemap:
+  priority: 1.0
+---
+<p id="describe-text">본 사이트에서 제공하는 투자정보는 투자판단에 대한 참고용 자료입니다. 제공하는 정보에대한 가격등락은 보장하지 않습니다.</p>
+<br>
+This is the index page, describe yourself in few sentences here. Perhaps talk about what you do for living and what you do in your free time. Maybe even leave an [email@address.com](#) or a link to your [resume](#).
+
+Pudhina Fresh is free and open-source. Checkout [Pudhina Fresh](https://github.com/ritijjain/pudhina-fresh).
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
