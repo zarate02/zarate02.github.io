@@ -7,14 +7,16 @@ description: myonbotMain
 sitemap:
   priority: 1.0
 ---
-<div style="height:500px">
+<div>
 	<div style="float:left;width:350px">
-		<p style="color: #0022ff; font-size: 150%">TopPick</p>
+		<p style="color: #0022ff; font-size: 150%">========TopPick=======</p>
 		<img src="./img/head.png"/>
+		<br/>
 	</div>
 	<div>
-		<p style="color: #ff0000; font-size: 150%">Warning</p>
+		<p style="color: #ff0000; font-size: 150%">========Warning=======</p>
 		<img src="./img/tail.png"/>
+		<br/>
 	</div>
 	<br/>
 	<br/>
