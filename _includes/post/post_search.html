@@ -1,0 +1,17 @@
+<div class="frame">
+  <div style="text-align:center">
+		<input id="input001" type="text" placeholder="ex) AAPL"/>
+		<img id="logo" src="">
+  </div>
+</div>
+
+<script>
+const inputBox = document.querySelector("input");
+inputBox.addEventListener("keypress", (e, code) => {
+	if (e.key === 'Enter') {
+			code = document.getElementById('input001').value
+			//alert("ggg")
+			document.getElementById('logo').src = "./img/chart/" + code + ".png"
+    }
+})
+</script>
