@@ -8,13 +8,13 @@ sitemap:
   priority: 1.0
 ---
 <div>
-	<div style="float:left">
-		<p style="text-align: center;color: #0022ff; font-size: 150%">TopPick</p>
+	<div>
+		<p style="text-align: center;color: #0022ff; font-size: 200%">TopPick</p>
 		<img src="./img/head.png"/>
 		<br/>
 	</div>
 	<div>
-		<p style="text-align: center;color: #ff0000; font-size: 150%">Warning</p>
+		<p style="text-align: center;color: #ff0000; font-size: 200%">Warning</p>
 		<img src="./img/tail.png"/>
 		<br/>
 	</div>
