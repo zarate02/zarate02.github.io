@@ -8,14 +8,14 @@ sitemap:
   priority: 1.0
 ---
 <div>
-	<div>
-		<p style="text-align: center;color: #0022ff; font-size: 200%">TopPick</p>
-		<img src="./img/head.png"/>
+	<div style="text-align: center;">
+		<p style="color: #0022ff; font-size: 200%">TopPick</p>
+		<img style="display: block; margin: 0px auto;" src="./img/head.png"/>
 		<br/>
 	</div>
-	<div>
-		<p style="text-align: center;color: #ff0000; font-size: 200%">Warning</p>
-		<img src="./img/tail.png"/>
+	<div style="text-align: center;">
+		<p style="color: #ff0000; font-size: 200%">Warning</p>
+		<img style="display: block; margin: 0px auto;" src="./img/tail.png"/>
 		<br/>
 	</div>
 	<br/>
