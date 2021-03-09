@@ -1,7 +1,8 @@
 <div class="frame">
   <div style="text-align:center">
 		<input id="input001" type="text" placeholder="ex) AAPL"/>
-		<img style="display: block; margin: 0px auto;" id="logo" src="">
+		<img style="display: block; margin: 0px auto;" id="logo1" src="">
+		<img style="display: block; margin: 0px auto;" id="logo2" src="">
   </div>
 </div>
 
@@ -10,7 +11,8 @@ const inputBox = document.querySelector("input");
 inputBox.addEventListener("keypress", (e, code) => {
 	if (e.key === 'Enter') {
 			code = document.getElementById('input001').value
-			document.getElementById('logo').src = "./img/chart/" + code + ".png"
+			document.getElementById('logo1').src = "./img/chart/" + code + ".png"
+			document.getElementById('logo2').src = "./img/est/" + code + ".png"
     }
 })
 </script>
