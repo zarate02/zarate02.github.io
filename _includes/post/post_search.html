@@ -17,15 +17,31 @@
 ticker.sort();
 
 function getview(code) {
-	code = document.getElementById('ticker').value
-	document.getElementById('logo1').src = "./img/chart/" + code + ".png"
-	document.getElementById('logo2').src = "./img/est/" + code + ".png"
+
+	code = code.toUpperCase();
+	
+	url1 = './img/chart/' + code + '.png';
+	url2 = './img/est/' + code + '.png';
+	
+	http = new XMLHttpRequest();
+	http.open('HEAD', url1, false);
+	http.send();
+	http_status = http.status;
+	
+	if(http_status == '200'){	
+		$("#logo1").attr('src', url1);
+		$("#logo2").attr('src', url2);
+	}
+	else {
+		alert("확인할수 없는 정보입니다");
+	}
+		
 }
 
 $("#ticker").autocomplete({
         source: ticker,
         select: function(event, ui) {
-			getview(ui.item)
+			getview(ui.item.value)
         },
         focus: function(event, ui) {
             return false;
