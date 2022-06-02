@@ -2,8 +2,8 @@
 layout: post
 title: "About the Author"
 author: "Paul Le"
-categories: facts
-tags: [sample]
+categories: development
+tags: [development]
 image: cuba-2.jpg
 ---
 
