@@ -2,8 +2,8 @@
 layout: post
 title: "Getting Started"
 author: "Paul Le"
-categories: documentation
-tags: [documentation,sample]
+categories: investment
+tags: [investment,sample]
 image: city-1.jpg
 ---
 

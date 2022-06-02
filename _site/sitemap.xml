@@ -19,12 +19,12 @@
 <loc>http://localhost:4000/contact</loc>
 </url>
 <url>
-<loc>http://localhost:4000/documentation</loc>
-</url>
-<url>
-<loc>http://localhost:4000/facts</loc>
+<loc>http://localhost:4000/development</loc>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/investment</loc>
 </url>
 </urlset>
