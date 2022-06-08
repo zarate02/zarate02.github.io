@@ -7,45 +7,96 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Welcome to Millennial!</title>
+				<title>Nestjs - 1. 프로젝트 생성과 구성</title>
 				
-					<dc:creator>Paul Le</dc:creator>
+					<dc:creator>zaimy</dc:creator>
 				
 				
-					<description>&lt;p&gt;Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.&lt;/p&gt;
+					<description>&lt;h1 id=&quot;1-프로젝트-생성과-구성&quot;&gt;1. 프로젝트 생성과 구성&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-프로젝트-생성&quot;&gt;1) 프로젝트 생성&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ npm i -g @nestjs/cli
+$ nest new 프로젝트명 (npm선택)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;2-nest-기본구성&quot;&gt;2) Nest 기본구성&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;./assets/img/nest00101.jpg&quot; alt=&quot;ex_screenshot&quot; width=&quot;150&quot; height=&quot;100&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;모듈
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nest g mo module-name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;외부로 서비스를 공개하고 싶을경우 export 추가&lt;/p&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Module({
+  controllers: [CatsController],
+  providers: [CatsService],
+  exports: [CatsService],
+})
+export class CatsModule {}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;컨트롤러
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nest g co controller-name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;서비스
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nest g service service-name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;hr /&gt;
+    &lt;h2 id=&quot;3-nest-응용구성&quot;&gt;3) Nest 응용구성&lt;/h2&gt;
+    &lt;p&gt;&lt;img src=&quot;./assets/img/nest00102.jpg&quot; alt=&quot;ex_screenshot&quot; width=&quot;220&quot; height=&quot;200&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;미들웨어
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nest g middleware middleware-name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;적용시 모듈을 아래와같이 수정&lt;/p&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export class AppModule {}
+=&amp;gt;
+export class AppModule implements NestModule {
+configure(consumer: MiddlewareConsumer) {
+  consumer.apply(MiddlewareNameMiddleware).forRoutes(&apos;*&apos;);
+}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;필터
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nest g filter filter-name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;개별 적용시 컨트롤러를 아래와같이 수정&lt;/p&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Get()
+@UseFilters(HttpExceptionFilter)
+getAllCat() {
+  throw new HttpException({ koko: &apos;fail&apos; }, HttpStatus.FORBIDDEN);
+  return &apos;all cat&apos;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;전체 적용시 메인을 아래와같이 수정&lt;/p&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const app = await NestFactory.create(AppModule);
+app.useGlobalFilters(new HttpExceptionFilter());
+await app.listen(3000);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 </description>
 				
-				<pubDate>Sun, 01 Jan 2017 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/welcome-to-millennial</link>
-				<guid isPermaLink="true">http://localhost:4000/welcome-to-millennial</guid>
+				<pubDate>Wed, 08 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/nest-001</link>
+				<guid isPermaLink="true">http://localhost:4000/nest-001</guid>
 			</item>
 		
 			<item>
-				<title>Getting Started</title>
+				<title>투자 - 빅솔론</title>
 				
-					<dc:creator>Paul Le</dc:creator>
+					<dc:creator>zaimy</dc:creator>
 				
 				
-					<description>&lt;h1 id=&quot;millennial&quot;&gt;Millennial&lt;/h1&gt;
+					<description>&lt;h1 id=&quot;빅솔론&quot;&gt;빅솔론&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-재무분석&quot;&gt;1) 재무분석&lt;/h2&gt;
 </description>
 				
-				<pubDate>Mon, 10 Oct 2016 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/getting-started</link>
-				<guid isPermaLink="true">http://localhost:4000/getting-started</guid>
-			</item>
-		
-			<item>
-				<title>About the Author</title>
-				
-					<dc:creator>Paul Le</dc:creator>
-				
-				
-					<description>&lt;p&gt;Hi there! I’m Paul. I’m a physics major turned programmer. Ever since I first learned how to program while taking a scientific computing for physics course, I have pursued programming as a passion, and as a career. Check out &lt;a href=&quot;https://www.lenpaul.com/&quot;&gt;my personal website&lt;/a&gt; for more information on my other projects (including more Jekyll themes!), as well as some of my writing.&lt;/p&gt;
-</description>
-				
-				<pubDate>Mon, 04 Apr 2016 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/about-the-author</link>
-				<guid isPermaLink="true">http://localhost:4000/about-the-author</guid>
+				<pubDate>Wed, 08 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/bixolon-001</link>
+				<guid isPermaLink="true">http://localhost:4000/bixolon-001</guid>
 			</item>
 		
 	</channel>

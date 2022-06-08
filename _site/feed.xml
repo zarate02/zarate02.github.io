@@ -1,314 +1,291 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-08T13:27:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zaimy</title><subtitle>Development And Investment Blog</subtitle><author><name>zaimy</name></author><entry><title type="html">Welcome to Millennial!</title><link href="http://localhost:4000/welcome-to-millennial" rel="alternate" type="text/html" title="Welcome to Millennial!" /><published>2017-01-01T00:00:00+09:00</published><updated>2017-01-01T00:00:00+09:00</updated><id>http://localhost:4000/welcome-to-millennial</id><content type="html" xml:base="http://localhost:4000/welcome-to-millennial"><![CDATA[<p>Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.</p>]]></content><author><name>Paul Le</name></author><category term="investment" /><category term="investment" /><category term="sample" /><summary type="html"><![CDATA[Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/cuba-1.jpg" /><media:content medium="image" url="http://localhost:4000/cuba-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Getting Started</title><link href="http://localhost:4000/getting-started" rel="alternate" type="text/html" title="Getting Started" /><published>2016-10-10T00:00:00+09:00</published><updated>2016-10-10T00:00:00+09:00</updated><id>http://localhost:4000/getting-started</id><content type="html" xml:base="http://localhost:4000/getting-started"><![CDATA[<h1 id="millennial">Millennial</h1>
-
-<p>Millennial is a minimalist Jekyll theme for running a simple, clean, content-focused publishing platform for your publication site or blog through <a href="https://pages.github.com/">Github Pages</a>, or on your own server. Everything that you will ever need to know about this Jekyll theme is included in the README below, which you can also find in <a href="https://lenpaul.github.io/Millennial/">the demo site</a>. For a guide on how to start a blog or personal website using Jekyll and GitHub Pages, please check out <a href="https://paulle.ca/how-to-start-a-blog-or-personal-website-using-jekyll-and-github-pages">this article</a>.</p>
-
-<p><img src="https://user-images.githubusercontent.com/8409329/32801138-33a72030-c94a-11e7-8a62-6184e6df5a8f.png" alt="alt text" title="Millennial Demo Image" /></p>
-
-<h2 id="notable-features">Notable features</h2>
-
-<ul>
-  <li>
-    <p>Compatible with GitHub Pages.</p>
-  </li>
-  <li>
-    <p>Support for Jekyll’s built-in Sass/SCSS preprocessor and data files for making customizing easier.</p>
-  </li>
-  <li>
-    <p><a href="https://www.google.com/analytics/">Google Analytics</a> support.</p>
-  </li>
-  <li>
-    <p>Commenting support powered by <a href="https://disqus.com/">Disqus</a>.</p>
-  </li>
-  <li>
-    <p>Optimized for search engines.</p>
-  </li>
-  <li>
-    <p>LaTeX support through <a href="https://www.mathjax.org/">MathJax</a>.</p>
-  </li>
-</ul>
-
-<h2 id="table-of-contents">Table of Contents</h2>
-
-<ol>
-  <li><a href="#introduction">Introduction</a>
-    <ol>
-      <li><a href="#what-is-jekyll">What is Jekyll</a></li>
-      <li><a href="#never-used-jekyll-before">Never Used Jeykll Before?</a></li>
-    </ol>
-  </li>
-  <li><a href="#installation">Installation</a>
-    <ol>
-      <li><a href="#github-pages-installation">GitHub Pages Installation</a></li>
-      <li><a href="#local-installation">Local Installation</a></li>
-      <li><a href="#directory-structure">Directory Structure</a></li>
-      <li><a href="#starting-from-scratch">Starting From Scratch</a></li>
-    </ol>
-  </li>
-  <li><a href="#configuration">Configuration</a>
-    <ol>
-      <li><a href="#sample-posts">Sample Posts</a></li>
-      <li><a href="#site-variables">Site Variables</a></li>
-      <li><a href="#adding-menu-pages">Adding Menu Pages</a></li>
-      <li><a href="#posts">Posts</a></li>
-      <li><a href="#layouts">Layouts</a></li>
-      <li><a href="#yaml-front-block-matter">YAML Front Block Matter</a></li>
-    </ol>
-  </li>
-  <li><a href="#features">Features</a>
-    <ol>
-      <li><a href="#design-considerations">Design Considerations</a></li>
-      <li><a href="#disqus">Disqus</a></li>
-      <li><a href="#google-analytics">Google Analytics</a></li>
-      <li><a href="#rss-feeds">RSS Feeds</a></li>
-      <li><a href="#social-media-icons">Social Media Icons</a></li>
-      <li><a href="#mathjax">MathJax</a></li>
-      <li><a href="#syntax-highlighting">Syntax Highlighting</a></li>
-      <li><a href="#markdown">Markdown</a></li>
-    </ol>
-  </li>
-  <li><a href="#everything-else">Everything Else</a></li>
-  <li><a href="#Contributing">Contributing</a></li>
-  <li><a href="#questions">Questions?</a></li>
-  <li><a href="#credits">Credits</a></li>
-  <li><a href="#license">License</a></li>
-</ol>
-
-<h2 id="introduction">Introduction</h2>
-
-<p>Millennial is a Jekyll theme that was built to be 100% compatible with <a href="https://pages.github.com/">GitHub Pages</a>. If you are unfamiliar with GitHub Pages, you can check out <a href="https://help.github.com/categories/github-pages-basics/">their documentation</a> for more information. <a href="http://jmcglone.com/guides/github-pages/">Jonathan McGlone’s guide</a> on creating and hosting a personal site on GitHub is also a good resource.</p>
-
-<h3 id="what-is-jekyll">What is Jekyll?</h3>
-
-<p>Jekyll is a simple, blog-aware, static site generator for personal, project, or organization sites. Basically, Jekyll takes your page content along with template files and produces a complete website. For more information, visit the <a href="https://jekyllrb.com/docs/home/">official Jekyll site</a> for their documentation. Codecademy also offers a great course on <a href="https://www.codecademy.com/learn/deploy-a-website">how to deploy a Jekyll site</a> for complete beginners.</p>
-
-<h3 id="never-used-jekyll-before">Never Used Jekyll Before?</h3>
-
-<p>The beauty of hosting your website on GitHub is that you don’t have to actually have Jekyll installed on your computer. Everything can be done through the GitHub code editor, with minimal knowledge of how to use Jekyll or the command line. All you have to do is add your posts to the <code class="language-plaintext highlighter-rouge">_posts</code> directory and edit the <code class="language-plaintext highlighter-rouge">_config.yml</code> file to change the site settings. With some rudimentary knowledge of HTML and CSS, you can even modify the site to your liking. This can all be done through the GitHub code editor, which acts like a content management system (CMS).</p>
-
-<h2 id="installation">Installation</h2>
-
-<h3 id="github-pages-installation">GitHub Pages Installation</h3>
-
-<p>To start using Jekyll right away with GitHub Pages, <a href="https://github.com/LeNPaul/Millennial/fork">fork the Millennial repository on GitHub</a>. From there, you can rename your repository to ‘USERNAME.github.io’, where ‘USERNAME’ is your GitHub username, and edit the <code class="language-plaintext highlighter-rouge">settings.yml</code> file in the <code class="language-plaintext highlighter-rouge">_data</code> folder to your liking. Ensure that you have a branch named <code class="language-plaintext highlighter-rouge">gh-pages</code>. Your website should be ready immediately at ‘http://USERNAME.github.io’. Note: if you are hosting several sites under the same GitHub username, then you will have to use <a href="https://help.github.com/articles/user-organization-and-project-pages/">Project Pages instead of User Pages</a> - just change the repository name to something other than ‘http://USERNAME.github.io’.</p>
-
-<p>Head over to the <code class="language-plaintext highlighter-rouge">_posts</code> directory to view all the posts that are currently on the website, and to see examples of what post files generally look like. You can simply just duplicate the template post and start adding your own content.</p>
-
-<h3 id="local-installation">Local Installation</h3>
-
-<p>For a full local installation of Millennial, <a href="https://github.com/LeNPaul/Millennial/archive/gh-pages.zip">download your own copy of Millennial</a> and unzip it into it’s own directory. From there, open up your favorite command line tool, enter <code class="language-plaintext highlighter-rouge">bundle install</code>, and then enter <code class="language-plaintext highlighter-rouge">jekyll serve</code>. Your site should be up and running locally at <a href="http://localhost:4000">http://localhost:4000</a>.</p>
-
-<h3 id="directory-structure">Directory Structure</h3>
-
-<p>If you are familiar with Jekyll, then the Millennial directory structure shouldn’t be too difficult to navigate. The following some highlights of the differences you might notice between the default directory structure. More information on what these folders and files do can be found in the <a href="https://jekyllrb.com/docs/structure/">Jekyll documentation site</a>.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Millennial/
-├── _data                      <span class="c"># Data files</span>
-|  └── settings.yml            <span class="c"># Theme settings and custom text</span>
-├── _includes                  <span class="c"># Theme includes</span>
-├── _layouts                   <span class="c"># Theme layouts (see below for details)</span>
-├── _posts                     <span class="c"># Where all your posts will go</span>
-├── assets                     <span class="c"># Style sheets and images are found here</span>
-|  ├── css                     <span class="c"># Style sheets go here</span>
-|  |  └── _sass                <span class="c"># Folder containing SCSS files</span>
-|  |  └── main.scss            <span class="c"># Main SCSS file</span>
-|  |  └── syntax.css           <span class="c"># Style sheet for code syntax highlighting</span>
-|  └── img                     <span class="c"># Images go here</span>
-├── pages                      <span class="c"># Category pages</span>
-├── _config.yml                <span class="c"># Site build settings</span>
-├── Gemfile                    <span class="c"># Ruby Gemfile for managing Jekyll plugins</span>
-├── index.md                   <span class="c"># Home page</span>
-├── LICENSE.md                 <span class="c"># License for this theme</span>
-├── README.md                  <span class="c"># Includes all of the documentation for this theme</span>
-└── rss-feed.xml               <span class="c"># Generates RSS 2.0 file which Jekyll points to</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-08T17:01:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zaimy</title><subtitle>Development And Investment Blog</subtitle><author><name>zaimy</name></author><entry><title type="html">Nestjs - 1. 프로젝트 생성과 구성</title><link href="http://localhost:4000/nest-001" rel="alternate" type="text/html" title="Nestjs - 1. 프로젝트 생성과 구성" /><published>2022-06-08T00:00:00+09:00</published><updated>2022-06-08T00:00:00+09:00</updated><id>http://localhost:4000/nest-001</id><content type="html" xml:base="http://localhost:4000/nest-001"><![CDATA[<h1 id="1-프로젝트-생성과-구성">1. 프로젝트 생성과 구성</h1>
+<hr />
+<h2 id="1-프로젝트-생성">1) 프로젝트 생성</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm i -g @nestjs/cli
+$ nest new 프로젝트명 (npm선택)
 </code></pre></div></div>
-
-<h3 id="starting-from-scratch">Starting From Scratch</h3>
-
-<p>To completely start from scratch, simply delete all the files in the <code class="language-plaintext highlighter-rouge">_posts</code>, <code class="language-plaintext highlighter-rouge">assets/img</code>, and <code class="language-plaintext highlighter-rouge">pages</code> folder, and add your own content. You may also replace the <code class="language-plaintext highlighter-rouge">README.md</code> file with your own README. Everything in the <code class="language-plaintext highlighter-rouge">_data</code> folder and <code class="language-plaintext highlighter-rouge">_config.yml</code> file can be edited to suit your needs. You may also change the <code class="language-plaintext highlighter-rouge">favicon.ico</code> file to your own favicon.</p>
-
-<h2 id="configuration">Configuration</h2>
-
-<h3 id="sample-posts">Sample Posts</h3>
-
-<p>Visit the <a href="https://lenpaul.github.io/Millennial/">the demo site</a> to find sample posts that show what different types of text formatting look like. You can find these posts in the <code class="language-plaintext highlighter-rouge">_posts</code> folder, which show what the best practices for setting up your own site are.</p>
-
-<h3 id="site-variables">Site Variables</h3>
-
-<p>To change site build settings, edit the <code class="language-plaintext highlighter-rouge">_config.yml</code> file found in the root of your repository, which you can tweak however you like. More information on configuration settings and plugins can be found on <a href="https://jekyllrb.com/docs/configuration/">the Jekyll documentation site</a>. This is also where you will be able to customize the title, description, and the author/owner of your site.</p>
-
-<p>If you are hosting your site on GitHub Pages, then committing a change to the <code class="language-plaintext highlighter-rouge">_config.yml</code> file will force a rebuild of your site with Jekyll. Any changes made should be viewable soon after. If you are hosting your site locally, then you must run <code class="language-plaintext highlighter-rouge">jekyll serve</code> again for the changes to take place.</p>
-
-<p>In the <code class="language-plaintext highlighter-rouge">settings.yml</code> file found in the <code class="language-plaintext highlighter-rouge">_data</code> folder, you will be able to customize your site settings, such as setting Disqus comments, Google Analytics, what shows up in your menu, and social media information.</p>
-
-<h3 id="adding-menu-pages">Adding Menu Pages</h3>
-
-<p>The menu pages are found in the <code class="language-plaintext highlighter-rouge">menu</code> folder in the root directory, and can be added to your menu in the <code class="language-plaintext highlighter-rouge">settings.yml</code> file.</p>
-
-<h3 id="posts">Posts</h3>
-
-<p>You will find example posts in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit any post and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention of <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.md</code> and includes the necessary front matter. Take a look at any sample post to get an idea about how it works. If you already have a website built with Jekyll, simply copy over your posts to migrate to Millennial.</p>
-
-<h3 id="layouts">Layouts</h3>
-
-<p>There are two main layout options that are included with Millennial: post and page. Layouts are specified through the <a href="https://jekyllrb.com/docs/frontmatter/">YAML front block matter</a>. Any file that contains a YAML front block matter will be processed by Jekyll. For example:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: post
-title: "Example Post"
----
-</code></pre></div></div>
-
-<p>Examples of what posts looks like can be found in the <code class="language-plaintext highlighter-rouge">_posts</code> directory, which includes this post you are reading right now. Posts are the basic blog post layout, which includes a header image, post content, author name, date published, social media sharing links, and related posts.</p>
-
-<p>Pages are essentially the post layout without any of the extra features of the posts layout. An example of what pages look like can be found at the <a href="https://lenpaul.github.io/Millennial/pages/documentation.html">documentation page</a>.</p>
-
-<p>In addition to the two main layout options above, there are also custom layouts that have been created for the <a href="https://lenpaul.github.io/Millennial/">home page</a> and the <a href="https://lenpaul.github.io/Millennial/pages/contact.html">contacts page</a>. These are simply just page layouts with some <a href="https://shopify.github.io/liquid/">Liquid template code</a>. Check out the <code class="language-plaintext highlighter-rouge">index.html</code> file in the root directory for what the code looks like.</p>
-
-<h3 id="yaml-front-block-matter">YAML Front Block Matter</h3>
-
-<p>The recommended YAML front block is:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout:
-title:
-author:
-categories:
-tags: []
-image:
----
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">layout</code> specifies which layout to use, <code class="language-plaintext highlighter-rouge">title</code> is the page or post title, <code class="language-plaintext highlighter-rouge">categories</code> can be used to better organize your posts, <code class="language-plaintext highlighter-rouge">tags</code> are used when generating related posts based on the topic of the post, and <code class="language-plaintext highlighter-rouge">image</code> specifies which images to use. Have a look at some posts in the <code class="language-plaintext highlighter-rouge">_posts</code> directory to see how these variables are set.</p>
-
-<h2 id="features">Features</h2>
-
-<h3 id="design-considerations">Design Considerations</h3>
-
-<p>Millennial was designed to be a minimalist theme in order for the focus to remain on your content. For example, links are signified mainly through an underline text-decoration, in order to maximize the perceived affordance of clickability (I originally just wanted to make the links a darker shade of grey).</p>
-
-<h3 id="disqus">Disqus</h3>
-
-<p>Millennial supports comments at the end of posts through <a href="https://disqus.com/">Disqus</a>. In order to activate Disqus commenting, set <code class="language-plaintext highlighter-rouge">disqus.comments</code> to true in the <code class="language-plaintext highlighter-rouge">_data/settings.yml</code> file. If you do not have a Disqus account already, you will have to set one up, and create a profile for your website. You will be given a <code class="language-plaintext highlighter-rouge">disqus_shortname</code> that will be used to generate the appropriate comments sections for your site. More information on <a href="http://www.perfectlyrandom.org/2014/06/29/adding-disqus-to-your-jekyll-powered-github-pages/">how to set up Disqus</a>.</p>
-
-<h3 id="google-analytics">Google Analytics</h3>
-
-<p>It is possible to track your site statistics through <a href="https://www.google.com/analytics/">Google Analytics</a>. Similar to Disqus, you will have to create an account for Google Analytics, and enter the correct Google ID for your site under <code class="language-plaintext highlighter-rouge">google-ID</code> in the <code class="language-plaintext highlighter-rouge">settings.yml</code> file. More information on <a href="https://michaelsoolee.com/google-analytics-jekyll/">how to set up Google Analytics</a>.</p>
-
-<h3 id="rss-feeds">RSS Feeds</h3>
-
-<p>Atom is supported by default through <a href="https://github.com/jekyll/jekyll-feed">jekyll-feed</a>. With jekyll-feed, you can set configuration variables such as ‘title’, ‘description’, and ‘author’, in the <code class="language-plaintext highlighter-rouge">_config.yml</code> file.</p>
-
-<p>RSS 2.0 is also supported through <a href="http://www.rssboard.org/rss-autodiscovery">RSS auto-discovery</a>. The <code class="language-plaintext highlighter-rouge">rss-feed.xml</code> file (based on the template found at <a href="https://github.com/snaptortoise/jekyll-rss-feeds">jekyll-rss-feeds</a>) that the feed path points to when using RSS 2.0 is automatically generated based on the appropriate configuration variables found in <code class="language-plaintext highlighter-rouge">_data/settings.yml</code>.</p>
-
-<p>To use RSS 2.0, ensure the following is done:</p>
+<hr />
+<h2 id="2-nest-기본구성">2) Nest 기본구성</h2>
+<p><img src="./assets/img/nest00101.jpg" alt="ex_screenshot" width="150" height="100" /></p>
+<ul>
+  <li>모듈
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g mo module-name
+</code></pre></div>    </div>
+    <p>외부로 서비스를 공개하고 싶을경우 export 추가</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Module({
+  controllers: [CatsController],
+  providers: [CatsService],
+  exports: [CatsService],
+})
+export class CatsModule {}
+</code></pre></div>    </div>
+  </li>
+  <li>컨트롤러
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g co controller-name
+</code></pre></div>    </div>
+  </li>
+  <li>서비스
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g service service-name
+</code></pre></div>    </div>
+    <hr />
+    <h2 id="3-nest-응용구성">3) Nest 응용구성</h2>
+    <p><img src="./assets/img/nest00102.jpg" alt="ex_screenshot" width="220" height="200" /></p>
+  </li>
+  <li>미들웨어
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g middleware middleware-name
+</code></pre></div>    </div>
+    <p>적용시 모듈을 아래와같이 수정</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export class AppModule {}
+=&gt;
+export class AppModule implements NestModule {
+configure(consumer: MiddlewareConsumer) {
+  consumer.apply(MiddlewareNameMiddleware).forRoutes('*');
+}
+}
+</code></pre></div>    </div>
+  </li>
+  <li>필터
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g filter filter-name
+</code></pre></div>    </div>
+    <p>개별 적용시 컨트롤러를 아래와같이 수정</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Get()
+@UseFilters(HttpExceptionFilter)
+getAllCat() {
+  throw new HttpException({ koko: 'fail' }, HttpStatus.FORBIDDEN);
+  return 'all cat';
+}
+</code></pre></div>    </div>
+    <p>전체 적용시 메인을 아래와같이 수정</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const app = await NestFactory.create(AppModule);
+app.useGlobalFilters(new HttpExceptionFilter());
+await app.listen(3000);
+</code></pre></div>    </div>
+  </li>
+  <li>파이프
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g pipe pipe-name
+</code></pre></div>    </div>
+    <p>파라메터 적용시 아래와같이 수정</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Get(':id')
+getOneCat(@Param('id', ParseIntPipe) id: number) {
+  return 'one cat';
+}
+</code></pre></div>    </div>
+    <p>커스텀 파이프작성시 아래와 같이 생성</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Injectable()
+export class PostiveIntPipe implements PipeTransform {
+  transform(value: any, metadata: ArgumentMetadata) {
+      if (value &lt; 0) {
+        throw new HttpException();
+      }
+      return value;
+  }
+}
+</code></pre></div>    </div>
+    <hr />
+    <h2 id="4-실행">4) 실행</h2>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm run start
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm run start:dev
+</code></pre></div>    </div>
+  </li>
+</ul>]]></content><author><name>zaimy</name></author><category term="development" /><category term="development" /><summary type="html"><![CDATA[1. 프로젝트 생성과 구성 1) 프로젝트 생성 $ npm i -g @nestjs/cli $ nest new 프로젝트명 (npm선택) 2) Nest 기본구성 모듈 $ nest g mo module-name 외부로 서비스를 공개하고 싶을경우 export 추가 @Module({ controllers: [CatsController], providers: [CatsService], exports: [CatsService], }) export class CatsModule {} 컨트롤러 $ nest g co controller-name 서비스 $ nest g service service-name 3) Nest 응용구성 미들웨어 $ nest g middleware middleware-name 적용시 모듈을 아래와같이 수정 export class AppModule {} =&gt; export class AppModule implements NestModule { configure(consumer: MiddlewareConsumer) { consumer.apply(MiddlewareNameMiddleware).forRoutes('*'); } } 필터 $ nest g filter filter-name 개별 적용시 컨트롤러를 아래와같이 수정 @Get() @UseFilters(HttpExceptionFilter) getAllCat() { throw new HttpException({ koko: 'fail' }, HttpStatus.FORBIDDEN); return 'all cat'; } 전체 적용시 메인을 아래와같이 수정 const app = await NestFactory.create(AppModule); app.useGlobalFilters(new HttpExceptionFilter()); await app.listen(3000);]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">투자 - 빅솔론</title><link href="http://localhost:4000/bixolon-001" rel="alternate" type="text/html" title="투자 - 빅솔론" /><published>2022-06-08T00:00:00+09:00</published><updated>2022-06-08T00:00:00+09:00</updated><id>http://localhost:4000/bixolon-001</id><content type="html" xml:base="http://localhost:4000/bixolon-001"><![CDATA[<h1 id="빅솔론">빅솔론</h1>
+<hr />
+<h2 id="1-재무분석">1) 재무분석</h2>
 
 <ul>
-  <li>
-    <p>Uncomment the last two lines in the <code class="language-plaintext highlighter-rouge">_config.yml</code> file.</p>
-  </li>
-  <li>
-    <p>In <code class="language-plaintext highlighter-rouge">_data/settings.yml</code>, under ‘social’, comment out the rss-square that points to <code class="language-plaintext highlighter-rouge">feed.xml</code>, and uncomment the rss-square that points to <code class="language-plaintext highlighter-rouge">rss-feed.xml</code>.</p>
-  </li>
-  <li>
-    <p>In <code class="language-plaintext highlighter-rouge">_includes/head.html</code>, comment out <code class="language-plaintext highlighter-rouge">&lt;link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Zaimy" /&gt;</code> and uncomment the line under the RSS 2.0 comment.</p>
-  </li>
+  <li>재무상태표</li>
 </ul>
 
-<h3 id="social-media-icons">Social Media Icons</h3>
-
-<p>All social media icons are courtesy of <a href="http://fontawesome.io/">Font Awesome</a>. You can change which icons appear, as well as the account that they link to, in the <code class="language-plaintext highlighter-rouge">settings.yml</code> file in the <code class="language-plaintext highlighter-rouge">_data</code> folder.</p>
-
-<h3 id="mathjax">MathJax</h3>
-
-<p>Millennial comes out of the box with <a href="https://www.mathjax.org/">MathJax</a>, which allows you to display mathematical equations in your posts through the use of <a href="http://www.andy-roberts.net/writing/latex/mathematics_1">LaTeX</a>.</p>
-
-<h3 id="syntax-highlighting">Syntax Highlighting</h3>
-
-<p>Millennial provides syntax highlighting through <a href="https://help.github.com/articles/creating-and-highlighting-code-blocks/">fenced code blocks</a>. Syntax highlighting allows you to display source code in different colors and fonts depending on what programming language is being displayed. You can find the full list of supported programming languages <a href="https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers">here</a>. Another option is to embed your code through <a href="https://en.support.wordpress.com/gist/">Gist</a>.</p>
-
-<h3 id="markdown">Markdown</h3>
-
-<p>As always, Jekyll offers support for GitHub Flavored Markdown, which allows you to format your posts using the <a href="https://guides.github.com/features/mastering-markdown/">Markdown syntax</a>. Examples of these text formatting features can be seen below. You can find this post in the <code class="language-plaintext highlighter-rouge">_posts</code> directory as well as the <code class="language-plaintext highlighter-rouge">README.md</code> file.</p>
-
-<h2 id="everything-else">Everything Else</h2>
-
-<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
-
-<h2 id="contributing">Contributing</h2>
-
-<p>If you would like to make a feature request, or report a bug or typo in the documentation, then please <a href="https://github.com/LeNPaul/Millennial/issues/new">submit a GitHub issue</a>. If you would like to make a contribution, then feel free to <a href="https://help.github.com/articles/about-pull-requests/">submit a pull request</a> - as a bonus, I will credit all contributors below! If this is your first pull request, it may be helpful to read up on the <a href="https://guides.github.com/introduction/flow/">GitHub Flow</a> first.</p>
-
-<p>Millennial has been designed as a base for users to customize and fit to their own unique needs. Please keep this in mind when requesting features and/or submitting pull requests. Some examples of changes that I would love to see are things that would make the site easier to use, or better ways of doing things. Please avoid changes that do not benefit the majority of users.</p>
-
-<h2 id="questions">Questions?</h2>
-
-<p>This theme is completely free and open source software. You may use it however you want, as it is distributed under the <a href="http://choosealicense.com/licenses/mit/">MIT License</a>. If you are having any problems, any questions or suggestions, feel free to <a href="https://twitter.com/intent/tweet?text=My%question%about%Millennial%is:%&amp;via=paululele">tweet at me</a>, or <a href="https://github.com/lenpaul/Millennial/issues/new">file a GitHub issue</a>.</p>
-
-<h2 id="credits">Credits</h2>
-
-<h3 id="creator">Creator</h3>
-
-<h4 id="paul-le">Paul Le</h4>
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>값</th>
+      <th>비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>매출채권</td>
+      <td>22,507,508,509</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>매입채무</td>
+      <td>16,312,956,576</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>재고자산</td>
+      <td>35,794,191,076</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>무형자산</td>
+      <td>1,258,066,311</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>유형자산</td>
+      <td>15,176,174,331</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>현금</td>
+      <td>65,674,617,801</td>
+      <td>현금성자산+단기투자상품</td>
+    </tr>
+    <tr>
+      <td>부채</td>
+      <td>12,998,224,444</td>
+      <td>총부채-매입채무</td>
+    </tr>
+  </tbody>
+</table>
 
 <ul>
-  <li>
-    <p><a href="http://lenpaul.com">www.lenpaul.com</a></p>
-  </li>
-  <li>
-    <p><a href="https://twitter.com/paululele">Twitter</a></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/LeNPaul">GitHub</a></p>
-  </li>
+  <li>손익계산서</li>
 </ul>
 
-<h3 id="contributors">Contributors</h3>
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>값</th>
+      <th>비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>영업이익</td>
+      <td>14,012,407,399</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>금융수익</td>
+      <td>16,472,532,072</td>
+      <td>투자성공과 환차익</td>
+    </tr>
+    <tr>
+      <td>당기순이익</td>
+      <td>25,857,297,635</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>영업순이익</td>
+      <td>9,384,765,563</td>
+      <td>당기순이익-금융수익</td>
+    </tr>
+  </tbody>
+</table>
 
 <ul>
-  <li>
-    <p><a href="https://github.com/b-morawiec">b-morawiec</a></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/JainVikas">JainVikas</a></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/mschaeffner">mschaeffner</a></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/cfe316">cfe316</a></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/JeremyGonzales">JeremyGonzales</a></p>
-  </li>
+  <li>가치평가</li>
 </ul>
 
-<h3 id="icons--demo-images">Icons + Demo Images</h3>
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>값</th>
+      <th>비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>투하자본</td>
+      <td>58,422,983,651</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>자기자본</td>
+      <td>111,099,377,008</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>보수적PBR</td>
+      <td>1.19</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>보수적PER</td>
+      <td>14.04</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>주가</td>
+      <td>6,850</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>보수적SRIM</td>
+      <td>6,889</td>
+      <td>COE 15%, 감소율 20%</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h2 id="2-비즈니스모델-분석">2) 비즈니스모델 분석</h2>
+<figure style="text-align:center">
+    <img src="assets/img/bixolon00101.png" style="width: 300px; height: 200px" />
+    <font color="gray">프린팅 매커니즘</font> 
+</figure>
 
 <ul>
-  <li>
-    <p><a href="https://deathtothestockphoto.com/">Death to Stock</a></p>
-  </li>
-  <li>
-    <p><a href="http://fontawesome.io/">Font Awesome</a></p>
-  </li>
+  <li>사업별</li>
 </ul>
 
-<h3 id="other">Other</h3>
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>비중</th>
+      <th>상세</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>포스프린터</td>
+      <td>36%</td>
+      <td>국내, 해외 모두 성장이 정체 혹은 감소</td>
+    </tr>
+    <tr>
+      <td>모바일프린터</td>
+      <td>21%</td>
+      <td>배달산업에 맞춰 소폭성장중인 캐쉬플로우</td>
+    </tr>
+    <tr>
+      <td>라벨프린터</td>
+      <td>25%</td>
+      <td>유통산업과 발맞춰 급격히 성장중인 캐쉬플로우</td>
+    </tr>
+    <tr>
+      <td>프린팅매커니즘</td>
+      <td>7%</td>
+      <td>매해 비중이 증가하고 있으며 국내 매출증가중<br />수출비중은 감소하고 있지만 비중이 크지않음<br />향후 키오스크기술의 핵심</td>
+    </tr>
+  </tbody>
+</table>
 
 <ul>
-  <li>
-    <p><a href="https://jekyllrb.com/">Jekyll</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.freecodecamp.org">Free Code Camp</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.khanacademy.org/">Khan Academy</a></p>
-  </li>
+  <li>성장성</li>
 </ul>
 
-<h2 id="license">License</h2>
+<p>비대면 코로나시대동안 포스프린터산업이 사양화되는 방향성을 보이지만 
+유통산업 부흥으로 라벨프린터시장의 급격한 성장의 수혜를 받음<br />
+그리고 향후 성장동력으로 키오스크산업 진출을 준비중
+그러나 신사업 개척보다는 매출에서 중국비중이 낮기에 미중블록화로인한 영업망개선이 더 기대됨</p>
 
-<p>Open sourced under the <a href="https://github.com/LeNPaul/Millennial/blob/gh-pages/LICENSE.md">MIT license</a>.</p>]]></content><author><name>Paul Le</name></author><category term="investment" /><category term="investment" /><category term="sample" /><summary type="html"><![CDATA[Millennial]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/city-1.jpg" /><media:content medium="image" url="http://localhost:4000/city-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">About the Author</title><link href="http://localhost:4000/about-the-author" rel="alternate" type="text/html" title="About the Author" /><published>2016-04-04T00:00:00+09:00</published><updated>2016-04-04T00:00:00+09:00</updated><id>http://localhost:4000/about-the-author</id><content type="html" xml:base="http://localhost:4000/about-the-author"><![CDATA[<p>Hi there! I’m Paul. I’m a physics major turned programmer. Ever since I first learned how to program while taking a scientific computing for physics course, I have pursued programming as a passion, and as a career. Check out <a href="https://www.lenpaul.com/">my personal website</a> for more information on my other projects (including more Jekyll themes!), as well as some of my writing.</p>]]></content><author><name>Paul Le</name></author><category term="development" /><category term="development" /><summary type="html"><![CDATA[Hi there! I’m Paul. I’m a physics major turned programmer. Ever since I first learned how to program while taking a scientific computing for physics course, I have pursued programming as a passion, and as a career. Check out my personal website for more information on my other projects (including more Jekyll themes!), as well as some of my writing.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/cuba-2.jpg" /><media:content medium="image" url="http://localhost:4000/cuba-2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<ul>
+  <li>영속성</li>
+</ul>
+
+<p>중기적으로 산업용소형프린트는 유통산업과 맞물려 축소되기 힘들며
+장기적으로는 임금상승으로인한 키오스크산업의 비전과 맞물려 지속적인 사업을 유지할 것으로 기대</p>
+
+<ul>
+  <li>주주친화</li>
+</ul>
+
+<p>기대배당률 3.65%의 매년 배당이성장하는 배당성장주</p>]]></content><author><name>zaimy</name></author><category term="investment" /><category term="investment" /><summary type="html"><![CDATA[빅솔론 1) 재무분석]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/bixolon_logo.jpg" /><media:content medium="image" url="http://localhost:4000/bixolon_logo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
