@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+  <head>
+  <title>
+    
+      Nestjs - 4. 로그 | Zaimy
+    
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Zaimy" />
+  <!-- RSS-v2.0
+  <link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="Zaimy | Development And Investment Blog"/>
+  //-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-112060364-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Nestjs - 4. 로그 | Zaimy</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Nestjs - 4. 로그" />
+<meta name="author" content="zaimy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="4. 로그 1) 설치 yarn add nest-winston yarn add winston yarn add winston-daily-rotate-file 2) 설정 로그레벨은 아래와 같다 { error: 0, warn: 1, info: 2, http: 3, verbose: 4, debug: 5, silly: 6 } 아래처럼 main.ts에 로그저장형태와 로그레벨 등을 설정한다 import { utilities, WinstonModule } from &#39;nest-winston&#39;; import { format, transports } from &#39;winston&#39;; import &#39;winston-daily-rotate-file&#39;; ``` const app = await NestFactory.create(AppModule, { logger: WinstonModule.createLogger({ transports: [ new transports.DailyRotateFile({ level: process.env.NODE_ENV === ‘dev’ ? ‘info’ : ‘silly’, format: format.combine( format.timestamp({ format: ‘YYYY-MM-DD HH:mm:ss’, }), format.printf( (info) =&gt; [${info.timestamp}] ${process.env.APP_ENV}.${info.level}: ${info.message}, ), ), filename: ‘logs/%DATE%.log’, datePattern: ‘YYYY-MM-DD’, zippedArchive: true, maxSize: ‘20m’, maxFiles: ‘14d’, })," />
+<meta property="og:description" content="4. 로그 1) 설치 yarn add nest-winston yarn add winston yarn add winston-daily-rotate-file 2) 설정 로그레벨은 아래와 같다 { error: 0, warn: 1, info: 2, http: 3, verbose: 4, debug: 5, silly: 6 } 아래처럼 main.ts에 로그저장형태와 로그레벨 등을 설정한다 import { utilities, WinstonModule } from &#39;nest-winston&#39;; import { format, transports } from &#39;winston&#39;; import &#39;winston-daily-rotate-file&#39;; ``` const app = await NestFactory.create(AppModule, { logger: WinstonModule.createLogger({ transports: [ new transports.DailyRotateFile({ level: process.env.NODE_ENV === ‘dev’ ? ‘info’ : ‘silly’, format: format.combine( format.timestamp({ format: ‘YYYY-MM-DD HH:mm:ss’, }), format.printf( (info) =&gt; [${info.timestamp}] ${process.env.APP_ENV}.${info.level}: ${info.message}, ), ), filename: ‘logs/%DATE%.log’, datePattern: ‘YYYY-MM-DD’, zippedArchive: true, maxSize: ‘20m’, maxFiles: ‘14d’, })," />
+<link rel="canonical" href="http://localhost:4000/nest-004" />
+<meta property="og:url" content="http://localhost:4000/nest-004" />
+<meta property="og:site_name" content="Zaimy" />
+<meta property="og:image" content="http://localhost:4000/nest_logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-06-10T00:00:00+09:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/nest_logo.png" />
+<meta property="twitter:title" content="Nestjs - 4. 로그" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"zaimy"},"dateModified":"2022-06-10T00:00:00+09:00","datePublished":"2022-06-10T00:00:00+09:00","description":"4. 로그 1) 설치 yarn add nest-winston yarn add winston yarn add winston-daily-rotate-file 2) 설정 로그레벨은 아래와 같다 { error: 0, warn: 1, info: 2, http: 3, verbose: 4, debug: 5, silly: 6 } 아래처럼 main.ts에 로그저장형태와 로그레벨 등을 설정한다 import { utilities, WinstonModule } from &#39;nest-winston&#39;; import { format, transports } from &#39;winston&#39;; import &#39;winston-daily-rotate-file&#39;; ``` const app = await NestFactory.create(AppModule, { logger: WinstonModule.createLogger({ transports: [ new transports.DailyRotateFile({ level: process.env.NODE_ENV === ‘dev’ ? ‘info’ : ‘silly’, format: format.combine( format.timestamp({ format: ‘YYYY-MM-DD HH:mm:ss’, }), format.printf( (info) =&gt; [${info.timestamp}] ${process.env.APP_ENV}.${info.level}: ${info.message}, ), ), filename: ‘logs/%DATE%.log’, datePattern: ‘YYYY-MM-DD’, zippedArchive: true, maxSize: ‘20m’, maxFiles: ‘14d’, }),","headline":"Nestjs - 4. 로그","image":"http://localhost:4000/nest_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nest-004"},"url":"http://localhost:4000/nest-004"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <div class="container">
+      <header class="site-header">
+  <h3 class="site-title">
+    <a href="/">Zaimy</a>
+  </h3>
+  <nav class="menu-list">
+    
+      <a href="/development" class="menu-link">Development</a>
+    
+      <a href="/investment" class="menu-link">Investment</a>
+    
+      <a href="/about" class="menu-link">About</a>
+    
+      <a href="/contact" class="menu-link">Contact</a>
+    
+    
+      <a href="https://twitter.com/paululele" class="menu-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    
+  </nav>
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <div class="dropdown-content">
+      
+        <a href="/development" class="menu-link">Development</a>
+      
+        <a href="/investment" class="menu-link">Investment</a>
+      
+        <a href="/about" class="menu-link">About</a>
+      
+        <a href="/contact" class="menu-link">Contact</a>
+      
+      
+        <a href="https://twitter.com/paululele" class="menu-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="content-wrapper">
+        <div class="post-content">
+  <h1>
+    Nestjs - 4. 로그
+  </h1>
+  
+    <span class="post-date">
+  Written on
+  
+  June
+  10th,
+  2022
+  by
+  
+    zaimy
+  
+</span>
+
+  
+  
+    <div class="featured-image">
+      <img src="/assets/img/nest_logo.png">
+    </div>
+  
+  <article>
+    <h1 id="4-로그">4. 로그</h1>
+<hr />
+<h2 id="1-설치">1) 설치</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add nest-winston
+yarn add winston
+yarn add winston-daily-rotate-file
+</code></pre></div></div>
+<hr />
+<h2 id="2-설정">2) 설정</h2>
+<p>로그레벨은 아래와 같다</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ 
+  error: 0, 
+  warn: 1, 
+  info: 2, 
+  http: 3,
+  verbose: 4, 
+  debug: 5, 
+  silly: 6 
+}
+</code></pre></div></div>
+<p>아래처럼 main.ts에 로그저장형태와 로그레벨 등을 설정한다</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { utilities, WinstonModule } from 'nest-winston';
+import { format, transports } from 'winston';
+import 'winston-daily-rotate-file';
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const app = await NestFactory.create(AppModule, {
+	logger: WinstonModule.createLogger({
+	  transports: [
+		new transports.DailyRotateFile({
+		  level: process.env.NODE_ENV === 'dev' ? 'info' : 'silly',
+		  format: format.combine(
+			format.timestamp({
+			  format: 'YYYY-MM-DD HH:mm:ss',
+			}),
+			format.printf(
+			  (info) =&gt;
+				`[${info.timestamp}] ${process.env.APP_ENV}.${info.level}: ${info.message}`,
+			),
+		  ),
+		  filename: 'logs/%DATE%.log',
+		  datePattern: 'YYYY-MM-DD',
+		  zippedArchive: true,
+		  maxSize: '20m',
+		  maxFiles: '14d',
+		}),
+
+		new transports.Console({
+		  level: process.env.NODE_ENV === 'dev' ? 'info' : 'silly',
+		  format: format.combine(
+			format.timestamp(),
+			utilities.format.nestLike('MyApp', {
+			  prettyPrint: true,
+			}),
+		  ),
+		}),
+	  ],
+	}),
+});
+</code></pre></div></div>
+
+<hr />
+<h2 id="3-사용">3) 사용</h2>
+<p>모듈에 아래와같이 프로바이더제공<br />
+main에 기본 로거를 대체했기에 기본로거를 쓰듯이 쓰면됨</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { Logger, Module } from '@nestjs/common';
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>providers: [Logger]
+</code></pre></div></div>
+<p>아래와같이 DI 주입받음</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constructor(
+	@Inject(Logger) private readonly logger: LoggerService,
+) {}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.logger.log('ttt');
+</code></pre></div></div>
+
+
+  </article>
+  
+    <div class="post-share">
+  <div class="post-date">Feel free to share!</div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=Nestjs - 4. 로그&amp;url=/nest-004" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/nest-004&amp;title=Nestjs - 4. 로그" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+  
+  
+    <div class="related">
+  <h2>You may also enjoy...</h2>
+  
+  <ul class="related-posts">
+    
+      
+        
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/nest-003">
+                <div class="related-thumbnail">
+                  
+                    <img src="http://localhost:4000/assets/img/nest_logo.png">
+                  
+                </div>
+                <div class="related-title">
+                  Nestjs - 3. 외부환경파일
+                </div>
+                <!--<small>June 10, 2022</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+    
+  </ul>
+</div>
+
+  
+  
+</div>
+
+      </div>
+      <footer class="footer">
+  
+    <a href="https://twitter.com/paululele" class="menu-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+  <div class="footer-description"><a href="/">Zaimy | Development And Investment Blog by zaimy</a></div>
+</footer>
+
+    </div>
+  </body>
+</html>

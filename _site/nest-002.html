@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+  <head>
+  <title>
+    
+      Nestjs - 2. 데이터베이스 | Zaimy
+    
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Zaimy" />
+  <!-- RSS-v2.0
+  <link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="Zaimy | Development And Investment Blog"/>
+  //-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-112060364-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Nestjs - 2. 데이터베이스 | Zaimy</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Nestjs - 2. 데이터베이스" />
+<meta name="author" content="zaimy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="2. 데이터베이스 (오라클 기준) 1) TypeORM 설치 오라클 연결시 Oracle Client 설치가 필요하다 (https://www.oracle.com/kr/database/technologies/instant-client/downloads.html) 그후 아래와 같이 typeORM을 다운로드한다 yarn add @nestjs/typeorm typeorm oracle 설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다" />
+<meta property="og:description" content="2. 데이터베이스 (오라클 기준) 1) TypeORM 설치 오라클 연결시 Oracle Client 설치가 필요하다 (https://www.oracle.com/kr/database/technologies/instant-client/downloads.html) 그후 아래와 같이 typeORM을 다운로드한다 yarn add @nestjs/typeorm typeorm oracle 설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다" />
+<link rel="canonical" href="http://localhost:4000/nest-002" />
+<meta property="og:url" content="http://localhost:4000/nest-002" />
+<meta property="og:site_name" content="Zaimy" />
+<meta property="og:image" content="http://localhost:4000/nest_logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-06-09T00:00:00+09:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/nest_logo.png" />
+<meta property="twitter:title" content="Nestjs - 2. 데이터베이스" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"zaimy"},"dateModified":"2022-06-09T00:00:00+09:00","datePublished":"2022-06-09T00:00:00+09:00","description":"2. 데이터베이스 (오라클 기준) 1) TypeORM 설치 오라클 연결시 Oracle Client 설치가 필요하다 (https://www.oracle.com/kr/database/technologies/instant-client/downloads.html) 그후 아래와 같이 typeORM을 다운로드한다 yarn add @nestjs/typeorm typeorm oracle 설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다","headline":"Nestjs - 2. 데이터베이스","image":"http://localhost:4000/nest_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nest-002"},"url":"http://localhost:4000/nest-002"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+    <div class="container">
+      <header class="site-header">
+  <h3 class="site-title">
+    <a href="/">Zaimy</a>
+  </h3>
+  <nav class="menu-list">
+    
+      <a href="/development" class="menu-link">Development</a>
+    
+      <a href="/investment" class="menu-link">Investment</a>
+    
+      <a href="/about" class="menu-link">About</a>
+    
+      <a href="/contact" class="menu-link">Contact</a>
+    
+    
+      <a href="https://twitter.com/paululele" class="menu-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    
+  </nav>
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <div class="dropdown-content">
+      
+        <a href="/development" class="menu-link">Development</a>
+      
+        <a href="/investment" class="menu-link">Investment</a>
+      
+        <a href="/about" class="menu-link">About</a>
+      
+        <a href="/contact" class="menu-link">Contact</a>
+      
+      
+        <a href="https://twitter.com/paululele" class="menu-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</header>
+
+      <div class="content-wrapper">
+        <div class="post-content">
+  <h1>
+    Nestjs - 2. 데이터베이스
+  </h1>
+  
+    <span class="post-date">
+  Written on
+  
+  June
+  9th,
+  2022
+  by
+  
+    zaimy
+  
+</span>
+
+  
+  
+    <div class="featured-image">
+      <img src="/assets/img/nest_logo.png">
+    </div>
+  
+  <article>
+    <h1 id="2-데이터베이스-오라클-기준">2. 데이터베이스 (오라클 기준)</h1>
+<hr />
+<h2 id="1-typeorm-설치">1) TypeORM 설치</h2>
+<p>오라클 연결시 Oracle Client 설치가 필요하다 
+(https://www.oracle.com/kr/database/technologies/instant-client/downloads.html)
+그후 아래와 같이 typeORM을 다운로드한다</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/typeorm typeorm oracle
+</code></pre></div></div>
+<p>설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다</p>
+
+<hr />
+<h2 id="2-데이터베이스-접속정보-설정">2) 데이터베이스 접속정보 설정</h2>
+<p>app.module.ts에 접속할 데이터베이스정보를 입력한다</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>imports: [
+	TypeOrmModule.forRoot({
+		type: 'oracle',
+		host: '아이피',
+		port: 포트,
+		username: '로그인ID',
+		password: '로그인PW',
+		//database: 'ServiceName',
+		sid: 'SID',
+		entities: [엔티티목록],
+		synchronize: false,
+		//logging: true,
+	}),
+	TypeOrmModule.forFeature([엔티티목록]),
+],
+</code></pre></div></div>
+<p>접속정보 옵션설정시 synchronize를 true 잡으면 기존에 구축된 데이터베이스에 변형이 가해진다
+그러므로 항상 false를 기본으로 삼고 프로토타입모델에만 true로 설정한다</p>
+
+<hr />
+<h2 id="3-엔티티-구축">3) 엔티티 구축</h2>
+<p>추천경로 : /src/entity/파일명(실제 테이블 소문자로 작성하길 추천).entity.ts</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { Column, Entity, PrimaryColumn } from 'typeorm';
+
+@Entity({ name: '테이블명', schema: '스카미마명' })
+export class 파스칼케이스파일명 {
+	@PrimaryColumn({ name: 'PK칼럼' }) pkcol: string;
+	@Column({ name: '일반적인칼럼' }) normalcol: string;
+}
+</code></pre></div></div>
+<p>작성된 Entity는 2)처럼 app.module.ts 에 등록되어있어야 사용할 수 있다</p>
+
+<hr />
+<h2 id="4-엔티티-활용">4) 엔티티 활용</h2>
+<p>필요한 Repository와 DataSource DI주입</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constructor(
+	@InjectRepository(엔티티명)
+	private 엔티티명Repository: Repository&lt;엔티티명&gt;,
+	private readonly dataSource: DataSource,
+) {}
+</code></pre></div></div>
+<p>Querybuilder Crud</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async get엔티티명(p: string): Promise&lt;AiFlashcd[]&gt; {
+	return await this.dataSource
+		.createQueryBuilder()
+		.select('a')
+		.from(엔티티명, 'a')
+		.where('a.컬럼명 = :id', { id: p })
+		.getMany();
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async insert엔티티명(p: string): Promise&lt;void&gt; {
+	await this.dataSource
+		.createQueryBuilder()
+		.insert()
+		.into(엔티티명)
+		.values({
+			컬럼명: p,
+			컬럼명: () =&gt; 'SYSDATE',
+		})
+		.execute();
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async update엔티티명(p: string): Promise&lt;void&gt; {
+	await this.dataSource
+		.createQueryBuilder()
+		.update(엔티티명)
+		.set({ 컬럼명: p + 1 })
+		.where({ 컬럼명: p })
+		.execute();
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async delete엔티티명(p: string): Promise&lt;void&gt; {
+	await this.dataSource
+		.createQueryBuilder()
+		.delete()
+		.from(엔티티명)
+		.where({ 컬럼명: p })
+		.execute();
+}
+</code></pre></div></div>
+<p>Repository Crud</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async get엔티티명(p: string): Promise&lt;엔티티명[]&gt; {
+	return this.엔티티명Repository.find();
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async insert엔티티명(p: string): Promise&lt;void&gt; {
+	await this.엔티티명Repository.save({
+		컬럼명: p,
+		컬럼명: new Date(),
+	});
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async update엔티티명(p: string): Promise&lt;void&gt; {
+	this.엔티티명Repository.update(
+		{ 컬럼명: p },
+		{
+			컬럼명: p + 1,
+		},
+	);
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async delete엔티티명(p: string): Promise&lt;void&gt; {
+	await this.엔티티명Repository.delete({ 컬럼명: In([p]) });
+}
+</code></pre></div></div>
+
+<hr />
+<h2 id="5-트랜잭션">5) 트랜잭션</h2>
+<p>아래와 같이 구성할대 에러처리시 Rollback이 발생한다</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async deleteAndInsert엔티티명(p: string): Promise&lt;void&gt; {
+	await this.dataSource.manager.transaction(async (a) =&gt; {
+		await a.getRepository(엔티티명).delete({ 
+			컬럼명: In([p]) 
+		});
+		throw new Error('ddd');
+		await a.getRepository(엔티티명).save({
+			컬럼명: p + 1,
+		});
+	});
+}
+</code></pre></div></div>
+
+  </article>
+  
+    <div class="post-share">
+  <div class="post-date">Feel free to share!</div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=Nestjs - 2. 데이터베이스&amp;url=/nest-002" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/nest-002&amp;title=Nestjs - 2. 데이터베이스" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+  
+  
+    <div class="related">
+  <h2>You may also enjoy...</h2>
+  
+  <ul class="related-posts">
+    
+      
+        
+          <li>
+            <h3>
+              <a href="/nest-004">
+                <div class="related-thumbnail">
+                  
+                    <img src="http://localhost:4000/assets/img/nest_logo.png">
+                  
+                </div>
+                <div class="related-title">
+                  Nestjs - 4. 로그
+                </div>
+                <!--<small>June 10, 2022</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/nest-003">
+                <div class="related-thumbnail">
+                  
+                    <img src="http://localhost:4000/assets/img/nest_logo.png">
+                  
+                </div>
+                <div class="related-title">
+                  Nestjs - 3. 외부환경파일
+                </div>
+                <!--<small>June 10, 2022</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+    
+  </ul>
+</div>
+
+  
+  
+</div>
+
+      </div>
+      <footer class="footer">
+  
+    <a href="https://twitter.com/paululele" class="menu-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+  <div class="footer-description"><a href="/">Zaimy | Development And Investment Blog by zaimy</a></div>
+</footer>
+
+    </div>
+  </body>
+</html>

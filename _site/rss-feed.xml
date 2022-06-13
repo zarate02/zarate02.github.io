@@ -7,6 +7,123 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Yarn 개발 환경구축</title>
+				
+					<dc:creator>zaimy</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;1-yarn-설치&quot;&gt;1. Yarn 설치&lt;/h1&gt;
+&lt;p&gt;nodejs 설치시 자동으로 설치됨 (https://nodejs.org/ko/)&lt;/p&gt;
+</description>
+				
+				<pubDate>Fri, 10 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/yarn-001</link>
+				<guid isPermaLink="true">http://localhost:4000/yarn-001</guid>
+			</item>
+		
+			<item>
+				<title>Nestjs - 4. 로그</title>
+				
+					<dc:creator>zaimy</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;4-로그&quot;&gt;4. 로그&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-설치&quot;&gt;1) 설치&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add nest-winston
+yarn add winston
+yarn add winston-daily-rotate-file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;2-설정&quot;&gt;2) 설정&lt;/h2&gt;
+&lt;p&gt;로그레벨은 아래와 같다&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{ 
+  error: 0, 
+  warn: 1, 
+  info: 2, 
+  http: 3,
+  verbose: 4, 
+  debug: 5, 
+  silly: 6 
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;아래처럼 main.ts에 로그저장형태와 로그레벨 등을 설정한다&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { utilities, WinstonModule } from &apos;nest-winston&apos;;
+import { format, transports } from &apos;winston&apos;;
+import &apos;winston-daily-rotate-file&apos;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;```
+const app = await NestFactory.create(AppModule, {
+	logger: WinstonModule.createLogger({
+	  transports: [
+		new transports.DailyRotateFile({
+		  level: process.env.NODE_ENV === ‘dev’ ? ‘info’ : ‘silly’,
+		  format: format.combine(
+			format.timestamp({
+			  format: ‘YYYY-MM-DD HH:mm:ss’,
+			}),
+			format.printf(
+			  (info) =&amp;gt;
+				&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[${info.timestamp}] ${process.env.APP_ENV}.${info.level}: ${info.message}&lt;/code&gt;,
+			),
+		  ),
+		  filename: ‘logs/%DATE%.log’,
+		  datePattern: ‘YYYY-MM-DD’,
+		  zippedArchive: true,
+		  maxSize: ‘20m’,
+		  maxFiles: ‘14d’,
+		}),&lt;/p&gt;
+</description>
+				
+				<pubDate>Fri, 10 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/nest-004</link>
+				<guid isPermaLink="true">http://localhost:4000/nest-004</guid>
+			</item>
+		
+			<item>
+				<title>Nestjs - 3. 외부환경파일</title>
+				
+					<dc:creator>zaimy</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;3-외부환경파일&quot;&gt;3. 외부환경파일&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-설치&quot;&gt;1) 설치&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;@nestjs/config : 설정 파일을 외부에서 가져오기 위한 nestjs에서 제공되는 모듈&lt;/li&gt;
+  &lt;li&gt;cross-env : os에 종속되지 않고, 플랫폼 표준화를 하기위해 필요한 라이브러리&lt;/li&gt;
+  &lt;li&gt;joi : 형식에 대한 유효성 검사&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				
+				<pubDate>Fri, 10 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/nest-003</link>
+				<guid isPermaLink="true">http://localhost:4000/nest-003</guid>
+			</item>
+		
+			<item>
+				<title>Nestjs - 2. 데이터베이스</title>
+				
+					<dc:creator>zaimy</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;2-데이터베이스-오라클-기준&quot;&gt;2. 데이터베이스 (오라클 기준)&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-typeorm-설치&quot;&gt;1) TypeORM 설치&lt;/h2&gt;
+&lt;p&gt;오라클 연결시 Oracle Client 설치가 필요하다 
+(https://www.oracle.com/kr/database/technologies/instant-client/downloads.html)
+그후 아래와 같이 typeORM을 다운로드한다&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add @nestjs/typeorm typeorm oracle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다&lt;/p&gt;
+</description>
+				
+				<pubDate>Thu, 09 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/nest-002</link>
+				<guid isPermaLink="true">http://localhost:4000/nest-002</guid>
+			</item>
+		
+			<item>
 				<title>Nestjs - 1. 프로젝트 생성과 구성</title>
 				
 					<dc:creator>zaimy</dc:creator>
@@ -15,8 +132,8 @@
 					<description>&lt;h1 id=&quot;1-프로젝트-생성과-구성&quot;&gt;1. 프로젝트 생성과 구성&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;1-프로젝트-생성&quot;&gt;1) 프로젝트 생성&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ npm i -g @nestjs/cli
-$ nest new 프로젝트명 (npm선택)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ yarn add @nestjs/cli
+$ nest new 프로젝트명 (yarn선택)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;2-nest-기본구성&quot;&gt;2) Nest 기본구성&lt;/h2&gt;

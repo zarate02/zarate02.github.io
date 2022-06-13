@@ -37,8 +37,8 @@
 <meta property="og:title" content="Nestjs - 1. 프로젝트 생성과 구성" />
 <meta name="author" content="zaimy" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="1. 프로젝트 생성과 구성 1) 프로젝트 생성 $ npm i -g @nestjs/cli $ nest new 프로젝트명 (npm선택) 2) Nest 기본구성 모듈 $ nest g mo module-name 외부로 서비스를 공개하고 싶을경우 export 추가 @Module({ controllers: [CatsController], providers: [CatsService], exports: [CatsService], }) export class CatsModule {} 컨트롤러 $ nest g co controller-name 서비스 $ nest g service service-name 3) Nest 응용구성 미들웨어 $ nest g middleware middleware-name 적용시 모듈을 아래와같이 수정 export class AppModule {} =&gt; export class AppModule implements NestModule { configure(consumer: MiddlewareConsumer) { consumer.apply(MiddlewareNameMiddleware).forRoutes(&#39;*&#39;); } } 필터 $ nest g filter filter-name 개별 적용시 컨트롤러를 아래와같이 수정 @Get() @UseFilters(HttpExceptionFilter) getAllCat() { throw new HttpException({ koko: &#39;fail&#39; }, HttpStatus.FORBIDDEN); return &#39;all cat&#39;; } 전체 적용시 메인을 아래와같이 수정 const app = await NestFactory.create(AppModule); app.useGlobalFilters(new HttpExceptionFilter()); await app.listen(3000);" />
-<meta property="og:description" content="1. 프로젝트 생성과 구성 1) 프로젝트 생성 $ npm i -g @nestjs/cli $ nest new 프로젝트명 (npm선택) 2) Nest 기본구성 모듈 $ nest g mo module-name 외부로 서비스를 공개하고 싶을경우 export 추가 @Module({ controllers: [CatsController], providers: [CatsService], exports: [CatsService], }) export class CatsModule {} 컨트롤러 $ nest g co controller-name 서비스 $ nest g service service-name 3) Nest 응용구성 미들웨어 $ nest g middleware middleware-name 적용시 모듈을 아래와같이 수정 export class AppModule {} =&gt; export class AppModule implements NestModule { configure(consumer: MiddlewareConsumer) { consumer.apply(MiddlewareNameMiddleware).forRoutes(&#39;*&#39;); } } 필터 $ nest g filter filter-name 개별 적용시 컨트롤러를 아래와같이 수정 @Get() @UseFilters(HttpExceptionFilter) getAllCat() { throw new HttpException({ koko: &#39;fail&#39; }, HttpStatus.FORBIDDEN); return &#39;all cat&#39;; } 전체 적용시 메인을 아래와같이 수정 const app = await NestFactory.create(AppModule); app.useGlobalFilters(new HttpExceptionFilter()); await app.listen(3000);" />
+<meta name="description" content="1. 프로젝트 생성과 구성 1) 프로젝트 생성 $ yarn add @nestjs/cli $ nest new 프로젝트명 (yarn선택) 2) Nest 기본구성 모듈 $ nest g mo module-name 외부로 서비스를 공개하고 싶을경우 export 추가 @Module({ controllers: [CatsController], providers: [CatsService], exports: [CatsService], }) export class CatsModule {} 컨트롤러 $ nest g co controller-name 서비스 $ nest g service service-name 3) Nest 응용구성 미들웨어 $ nest g middleware middleware-name 적용시 모듈을 아래와같이 수정 export class AppModule {} =&gt; export class AppModule implements NestModule { configure(consumer: MiddlewareConsumer) { consumer.apply(MiddlewareNameMiddleware).forRoutes(&#39;*&#39;); } } 필터 $ nest g filter filter-name 개별 적용시 컨트롤러를 아래와같이 수정 @Get() @UseFilters(HttpExceptionFilter) getAllCat() { throw new HttpException({ koko: &#39;fail&#39; }, HttpStatus.FORBIDDEN); return &#39;all cat&#39;; } 전체 적용시 메인을 아래와같이 수정 const app = await NestFactory.create(AppModule); app.useGlobalFilters(new HttpExceptionFilter()); await app.listen(3000);" />
+<meta property="og:description" content="1. 프로젝트 생성과 구성 1) 프로젝트 생성 $ yarn add @nestjs/cli $ nest new 프로젝트명 (yarn선택) 2) Nest 기본구성 모듈 $ nest g mo module-name 외부로 서비스를 공개하고 싶을경우 export 추가 @Module({ controllers: [CatsController], providers: [CatsService], exports: [CatsService], }) export class CatsModule {} 컨트롤러 $ nest g co controller-name 서비스 $ nest g service service-name 3) Nest 응용구성 미들웨어 $ nest g middleware middleware-name 적용시 모듈을 아래와같이 수정 export class AppModule {} =&gt; export class AppModule implements NestModule { configure(consumer: MiddlewareConsumer) { consumer.apply(MiddlewareNameMiddleware).forRoutes(&#39;*&#39;); } } 필터 $ nest g filter filter-name 개별 적용시 컨트롤러를 아래와같이 수정 @Get() @UseFilters(HttpExceptionFilter) getAllCat() { throw new HttpException({ koko: &#39;fail&#39; }, HttpStatus.FORBIDDEN); return &#39;all cat&#39;; } 전체 적용시 메인을 아래와같이 수정 const app = await NestFactory.create(AppModule); app.useGlobalFilters(new HttpExceptionFilter()); await app.listen(3000);" />
 <link rel="canonical" href="http://localhost:4000/nest-001" />
 <meta property="og:url" content="http://localhost:4000/nest-001" />
 <meta property="og:site_name" content="Zaimy" />
@@ -49,7 +49,7 @@
 <meta property="twitter:image" content="http://localhost:4000/nest_logo.png" />
 <meta property="twitter:title" content="Nestjs - 1. 프로젝트 생성과 구성" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"zaimy"},"dateModified":"2022-06-08T00:00:00+09:00","datePublished":"2022-06-08T00:00:00+09:00","description":"1. 프로젝트 생성과 구성 1) 프로젝트 생성 $ npm i -g @nestjs/cli $ nest new 프로젝트명 (npm선택) 2) Nest 기본구성 모듈 $ nest g mo module-name 외부로 서비스를 공개하고 싶을경우 export 추가 @Module({ controllers: [CatsController], providers: [CatsService], exports: [CatsService], }) export class CatsModule {} 컨트롤러 $ nest g co controller-name 서비스 $ nest g service service-name 3) Nest 응용구성 미들웨어 $ nest g middleware middleware-name 적용시 모듈을 아래와같이 수정 export class AppModule {} =&gt; export class AppModule implements NestModule { configure(consumer: MiddlewareConsumer) { consumer.apply(MiddlewareNameMiddleware).forRoutes(&#39;*&#39;); } } 필터 $ nest g filter filter-name 개별 적용시 컨트롤러를 아래와같이 수정 @Get() @UseFilters(HttpExceptionFilter) getAllCat() { throw new HttpException({ koko: &#39;fail&#39; }, HttpStatus.FORBIDDEN); return &#39;all cat&#39;; } 전체 적용시 메인을 아래와같이 수정 const app = await NestFactory.create(AppModule); app.useGlobalFilters(new HttpExceptionFilter()); await app.listen(3000);","headline":"Nestjs - 1. 프로젝트 생성과 구성","image":"http://localhost:4000/nest_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nest-001"},"url":"http://localhost:4000/nest-001"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"zaimy"},"dateModified":"2022-06-08T00:00:00+09:00","datePublished":"2022-06-08T00:00:00+09:00","description":"1. 프로젝트 생성과 구성 1) 프로젝트 생성 $ yarn add @nestjs/cli $ nest new 프로젝트명 (yarn선택) 2) Nest 기본구성 모듈 $ nest g mo module-name 외부로 서비스를 공개하고 싶을경우 export 추가 @Module({ controllers: [CatsController], providers: [CatsService], exports: [CatsService], }) export class CatsModule {} 컨트롤러 $ nest g co controller-name 서비스 $ nest g service service-name 3) Nest 응용구성 미들웨어 $ nest g middleware middleware-name 적용시 모듈을 아래와같이 수정 export class AppModule {} =&gt; export class AppModule implements NestModule { configure(consumer: MiddlewareConsumer) { consumer.apply(MiddlewareNameMiddleware).forRoutes(&#39;*&#39;); } } 필터 $ nest g filter filter-name 개별 적용시 컨트롤러를 아래와같이 수정 @Get() @UseFilters(HttpExceptionFilter) getAllCat() { throw new HttpException({ koko: &#39;fail&#39; }, HttpStatus.FORBIDDEN); return &#39;all cat&#39;; } 전체 적용시 메인을 아래와같이 수정 const app = await NestFactory.create(AppModule); app.useGlobalFilters(new HttpExceptionFilter()); await app.listen(3000);","headline":"Nestjs - 1. 프로젝트 생성과 구성","image":"http://localhost:4000/nest_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nest-001"},"url":"http://localhost:4000/nest-001"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -121,8 +121,8 @@
     <h1 id="1-프로젝트-생성과-구성">1. 프로젝트 생성과 구성</h1>
 <hr />
 <h2 id="1-프로젝트-생성">1) 프로젝트 생성</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm i -g @nestjs/cli
-$ nest new 프로젝트명 (npm선택)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn add @nestjs/cli
+$ nest new 프로젝트명 (yarn선택)
 </code></pre></div></div>
 <hr />
 <h2 id="2-nest-기본구성">2) Nest 기본구성</h2>
@@ -201,14 +201,40 @@ export class PostiveIntPipe implements PipeTransform {
   }
 }
 </code></pre></div>    </div>
-    <hr />
-    <h2 id="4-실행">4) 실행</h2>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm run start
+  </li>
+  <li>인터셉터(AOP)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g interceptor interceptor-name
 </code></pre></div>    </div>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm run start:dev
+    <p>인터셉터 적용시 아래와 같이 사용</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Get('test2')
+@UseInterceptors(InterceptorNameInterceptor)
+getHello2(@Param() param: { id: string }): string {
+  return this.catsService.getHello();
+}
+</code></pre></div>    </div>
+    <p>인터셉터 구현</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Injectable()
+export class InterceptorNameInterceptor implements NestInterceptor {
+  intercept(context: ExecutionContext, next: CallHandler): Observable&lt;any&gt; {
+      return next.handle().pipe(map((data) =&gt; ({ success: true, data })));
+  }
+}
 </code></pre></div>    </div>
   </li>
+  <li>라이프사이클
+    <ul>
+      <li>글로벌 -&gt; 개별</li>
+      <li>request -&gt; middleware -&gt; guard -&gt; interceptor -&gt; pipe -&gt; controller</li>
+    </ul>
+  </li>
 </ul>
+
+<hr />
+<h2 id="4-실행">4) 실행</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn start
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn start:dev
+</code></pre></div></div>
 
   </article>
   
@@ -229,6 +255,41 @@ export class PostiveIntPipe implements PipeTransform {
     
       
         
+          <li>
+            <h3>
+              <a href="/nest-004">
+                <div class="related-thumbnail">
+                  
+                    <img src="http://localhost:4000/assets/img/nest_logo.png">
+                  
+                </div>
+                <div class="related-title">
+                  Nestjs - 4. 로그
+                </div>
+                <!--<small>June 10, 2022</small>-->
+              </a>
+            </h3>
+          </li>
+          
+        
+      
+        
+          <li>
+            <h3>
+              <a href="/nest-003">
+                <div class="related-thumbnail">
+                  
+                    <img src="http://localhost:4000/assets/img/nest_logo.png">
+                  
+                </div>
+                <div class="related-title">
+                  Nestjs - 3. 외부환경파일
+                </div>
+                <!--<small>June 10, 2022</small>-->
+              </a>
+            </h3>
+          </li>
+          
         
       
     
