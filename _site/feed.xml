@@ -1,13 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-10T16:58:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zaimy</title><subtitle>Development And Investment Blog</subtitle><author><name>zaimy</name></author><entry><title type="html">Yarn 개발 환경구축</title><link href="http://localhost:4000/yarn-001" rel="alternate" type="text/html" title="Yarn 개발 환경구축" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/yarn-001</id><content type="html" xml:base="http://localhost:4000/yarn-001"><![CDATA[<h1 id="1-yarn-설치">1. Yarn 설치</h1>
-<p>nodejs 설치시 자동으로 설치됨 (https://nodejs.org/ko/)</p>
-
-<h1 id="2-yarn-모듈추가">2. Yarn 모듈추가</h1>
-<p>아래와 같은 형식으로 모듈을 추가한다</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/cli
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-13T16:22:20+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zaimy</title><subtitle>Development And Investment Blog</subtitle><author><name>zaimy</name></author><entry><title type="html">Nestjs - 5. 스케쥴링</title><link href="http://localhost:4000/nest-005" rel="alternate" type="text/html" title="Nestjs - 5. 스케쥴링" /><published>2022-06-13T00:00:00+09:00</published><updated>2022-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nest-005</id><content type="html" xml:base="http://localhost:4000/nest-005"><![CDATA[<h1 id="1-스케쥴링">1. 스케쥴링</h1>
+<hr />
+<h2 id="1-설치">1) 설치</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/schedule
+yarn add @types/cron
 </code></pre></div></div>
-<p>아래와 같은 형식으로 프로젝트를 실행한다</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn start
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="yarn" /><summary type="html"><![CDATA[1. Yarn 설치 nodejs 설치시 자동으로 설치됨 (https://nodejs.org/ko/)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/yarn_logo.jpeg" /><media:content medium="image" url="http://localhost:4000/yarn_logo.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 4. 로그</title><link href="http://localhost:4000/nest-004" rel="alternate" type="text/html" title="Nestjs - 4. 로그" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/nest-004</id><content type="html" xml:base="http://localhost:4000/nest-004"><![CDATA[<h1 id="4-로그">4. 로그</h1>
+<hr />
+<h2 id="2-활용">2) 활용</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nest g mo job
+nest g s job
+</code></pre></div></div>
+<p>모듈은 아래와같이 작성한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Module({
+	imports: [ScheduleModule.forRoot()],
+	providers: [JobService],
+})
+export class JobModule {}
+
+</code></pre></div></div>
+<p>서비스는 아래와같이 작성한다</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Injectable()
+export class JobService {
+	@Cron('10 * * * * *')
+	handleCron() {
+		console.log('Called when the current second is 45');
+	}
+
+	@Interval(10000)
+	handleInterval() {
+		console.log('Called every 10 seconds');
+	}
+}
+
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[1. 스케쥴링 1) 설치 yarn add @nestjs/schedule yarn add @types/cron 2) 활용 nest g mo job nest g s job 모듈은 아래와같이 작성한다. ``` @Module({ imports: [ScheduleModule.forRoot()], providers: [JobService], }) export class JobModule {}]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 8. 첨부파일</title><link href="http://localhost:4000/nest-008" rel="alternate" type="text/html" title="Nestjs - 8. 첨부파일" /><published>2022-06-13T00:00:00+09:00</published><updated>2022-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nest-008</id><content type="html" xml:base="http://localhost:4000/nest-008"><![CDATA[<h1 id="8-첨부파일">8. 첨부파일</h1>
+<hr />
+<h2 id="1-설치">1) 설치</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @types/multer
+</code></pre></div></div>
+<hr />
+<h2 id="2-활용">2) 활용</h2>
+<p>multer옵션파일 생성</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { existsSync, mkdirSync } from 'fs';
+import * as multer from 'multer';
+import { extname } from 'path';
+
+export const multerOptions = {
+	// fileFilter: (request, file, callback) =&gt; {
+	//   if (file.mimetype.match(/\/(jpg|jpeg|png)$/)) {
+	//     // 이미지 형식은 jpg, jpeg, png만 허용합니다.
+	//     callback(null, true);
+	//   }
+	// },
+	storage: multer.diskStorage({
+		destination: (request, file, callback) =&gt; {
+			const uploadPath = 'uploads';
+			if (!existsSync(uploadPath)) {
+				// uploads 폴더가 존재하지 않을시, 생성합니다.
+				mkdirSync(uploadPath);
+			}
+			callback(null, uploadPath);
+		},
+		filename: (request, file, callback) =&gt; {
+			//파일 이름 설정
+			callback(null, `${Date.now()}${extname(file.originalname)}`);
+		},
+	}),
+};
+</code></pre></div></div>
+<p>인터셉터에 옵션적용</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Post('upload')
+@UseInterceptors(FileInterceptor('file', multerOptions))
+uploadFile(@UploadedFile() file: Express.Multer.File) {
+	console.log(file);
+}
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[8. 첨부파일 1) 설치 yarn add @types/multer 2) 활용 multer옵션파일 생성 ``` import { existsSync, mkdirSync } from ‘fs’; import * as multer from ‘multer’; import { extname } from ‘path’;]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 7. Swagger</title><link href="http://localhost:4000/nest-007" rel="alternate" type="text/html" title="Nestjs - 7. Swagger" /><published>2022-06-13T00:00:00+09:00</published><updated>2022-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nest-007</id><content type="html" xml:base="http://localhost:4000/nest-007"><![CDATA[<h1 id="7-swagger">7. Swagger</h1>
+<hr />
+<h2 id="1-설치">1) 설치</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/swagger
+yarn add swagger-ui-express
+</code></pre></div></div>
+<hr />
+<h2 id="2-활용">2) 활용</h2>
+<p>main.ts 는 아래와같이 활용</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const app = await NestFactory.create(AppModule);
+
+const config = new DocumentBuilder()
+	.setTitle('Cats example')
+	.setDescription('The cats API description')
+	.setVersion('1.0')
+	.addTag('cats')
+	.build();
+const document = SwaggerModule.createDocument(app, config);
+SwaggerModule.setup('api', app, document);
+
+await app.listen(3000);
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[7. Swagger 1) 설치 yarn add @nestjs/swagger yarn add swagger-ui-express 2) 활용 main.ts 는 아래와같이 활용 ``` const app = await NestFactory.create(AppModule);]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 6. AXIOS 통신</title><link href="http://localhost:4000/nest-006" rel="alternate" type="text/html" title="Nestjs - 6. AXIOS 통신" /><published>2022-06-13T00:00:00+09:00</published><updated>2022-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nest-006</id><content type="html" xml:base="http://localhost:4000/nest-006"><![CDATA[<h1 id="6-axios-통신">6. AXIOS 통신</h1>
+<hr />
+<h2 id="1-설치">1) 설치</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add axios
+yarn add @nestjs/axios
+</code></pre></div></div>
+<hr />
+<h2 id="2-nest-기본구성">2) Nest 기본구성</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { HttpService } from '@nestjs/axios';
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const a = await lastValueFrom(this.httpService.get(url));
+console.log(a.data);
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[6. AXIOS 통신 1) 설치 yarn add axios yarn add @nestjs/axios 2) Nest 기본구성 import { HttpService } from '@nestjs/axios'; const a = await lastValueFrom(this.httpService.get(url)); console.log(a.data);]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 4. 로그</title><link href="http://localhost:4000/nest-004" rel="alternate" type="text/html" title="Nestjs - 4. 로그" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/nest-004</id><content type="html" xml:base="http://localhost:4000/nest-004"><![CDATA[<h1 id="4-로그">4. 로그</h1>
 <hr />
 <h2 id="1-설치">1) 설치</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add nest-winston
@@ -81,7 +179,16 @@ main에 기본 로거를 대체했기에 기본로거를 쓰듯이 쓰면됨</p>
 ) {}
 </code></pre></div></div>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.logger.log('ttt');
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[4. 로그 1) 설치 yarn add nest-winston yarn add winston yarn add winston-daily-rotate-file 2) 설정 로그레벨은 아래와 같다 { error: 0, warn: 1, info: 2, http: 3, verbose: 4, debug: 5, silly: 6 } 아래처럼 main.ts에 로그저장형태와 로그레벨 등을 설정한다 import { utilities, WinstonModule } from 'nest-winston'; import { format, transports } from 'winston'; import 'winston-daily-rotate-file'; ``` const app = await NestFactory.create(AppModule, { logger: WinstonModule.createLogger({ transports: [ new transports.DailyRotateFile({ level: process.env.NODE_ENV === ‘dev’ ? ‘info’ : ‘silly’, format: format.combine( format.timestamp({ format: ‘YYYY-MM-DD HH:mm:ss’, }), format.printf( (info) =&gt; [${info.timestamp}] ${process.env.APP_ENV}.${info.level}: ${info.message}, ), ), filename: ‘logs/%DATE%.log’, datePattern: ‘YYYY-MM-DD’, zippedArchive: true, maxSize: ‘20m’, maxFiles: ‘14d’, }),]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 3. 외부환경파일</title><link href="http://localhost:4000/nest-003" rel="alternate" type="text/html" title="Nestjs - 3. 외부환경파일" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/nest-003</id><content type="html" xml:base="http://localhost:4000/nest-003"><![CDATA[<h1 id="3-외부환경파일">3. 외부환경파일</h1>
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[4. 로그 1) 설치 yarn add nest-winston yarn add winston yarn add winston-daily-rotate-file 2) 설정 로그레벨은 아래와 같다 { error: 0, warn: 1, info: 2, http: 3, verbose: 4, debug: 5, silly: 6 } 아래처럼 main.ts에 로그저장형태와 로그레벨 등을 설정한다 import { utilities, WinstonModule } from 'nest-winston'; import { format, transports } from 'winston'; import 'winston-daily-rotate-file'; ``` const app = await NestFactory.create(AppModule, { logger: WinstonModule.createLogger({ transports: [ new transports.DailyRotateFile({ level: process.env.NODE_ENV === ‘dev’ ? ‘info’ : ‘silly’, format: format.combine( format.timestamp({ format: ‘YYYY-MM-DD HH:mm:ss’, }), format.printf( (info) =&gt; [${info.timestamp}] ${process.env.APP_ENV}.${info.level}: ${info.message}, ), ), filename: ‘logs/%DATE%.log’, datePattern: ‘YYYY-MM-DD’, zippedArchive: true, maxSize: ‘20m’, maxFiles: ‘14d’, }),]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Yarn 개발 환경구축</title><link href="http://localhost:4000/yarn-001" rel="alternate" type="text/html" title="Yarn 개발 환경구축" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/yarn-001</id><content type="html" xml:base="http://localhost:4000/yarn-001"><![CDATA[<h1 id="1-yarn-설치">1. Yarn 설치</h1>
+<p>nodejs 설치시 자동으로 설치됨 (https://nodejs.org/ko/)</p>
+
+<h1 id="2-yarn-모듈추가">2. Yarn 모듈추가</h1>
+<p>아래와 같은 형식으로 모듈을 추가한다</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/cli
+</code></pre></div></div>
+<p>아래와 같은 형식으로 프로젝트를 실행한다</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn start
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="yarn" /><summary type="html"><![CDATA[1. Yarn 설치 nodejs 설치시 자동으로 설치됨 (https://nodejs.org/ko/)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/yarn_logo.jpeg" /><media:content medium="image" url="http://localhost:4000/yarn_logo.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 3. 외부환경파일</title><link href="http://localhost:4000/nest-003" rel="alternate" type="text/html" title="Nestjs - 3. 외부환경파일" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/nest-003</id><content type="html" xml:base="http://localhost:4000/nest-003"><![CDATA[<h1 id="3-외부환경파일">3. 외부환경파일</h1>
 <hr />
 <h2 id="1-설치">1) 설치</h2>
 <ul>
@@ -156,6 +263,12 @@ DB_SID=sid
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/typeorm typeorm oracle
 </code></pre></div></div>
 <p>설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다</p>
+
+<p>포스트그래스시</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add pg
+yarn add @nestjs/typeorm typeorm postgres
+</code></pre></div></div>
 
 <hr />
 <h2 id="2-데이터베이스-접속정보-설정">2) 데이터베이스 접속정보 설정</h2>
@@ -410,11 +523,6 @@ export class 파스칼케이스파일명 {
       <td>6,850</td>
       <td> </td>
     </tr>
-    <tr>
-      <td>보수적SRIM</td>
-      <td>6,889</td>
-      <td>COE 15%, 감소율 20%</td>
-    </tr>
   </tbody>
 </table>
 
@@ -489,7 +597,7 @@ $ nest new 프로젝트명 (yarn선택)
 </code></pre></div></div>
 <hr />
 <h2 id="2-nest-기본구성">2) Nest 기본구성</h2>
-<p><img src="./assets/img/nest00101.jpg" alt="ex_screenshot" width="150" height="100" /></p>
+<p><img src="./assets/img/nest00101.JPG" alt="ex_screenshot" width="150" height="100" /></p>
 <ul>
   <li>모듈
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g mo module-name
@@ -512,7 +620,7 @@ export class CatsModule {}
 </code></pre></div>    </div>
     <hr />
     <h2 id="3-nest-응용구성">3) Nest 응용구성</h2>
-    <p><img src="./assets/img/nest00102.jpg" alt="ex_screenshot" width="220" height="200" /></p>
+    <p><img src="./assets/img/nest00102.JPG" alt="ex_screenshot" width="220" height="200" /></p>
   </li>
   <li>미들웨어
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g middleware middleware-name

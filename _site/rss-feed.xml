@@ -7,6 +7,112 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Nestjs - 8. 첨부파일</title>
+				
+					<dc:creator>zaimy</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;8-첨부파일&quot;&gt;8. 첨부파일&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-설치&quot;&gt;1) 설치&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add @types/multer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;2-활용&quot;&gt;2) 활용&lt;/h2&gt;
+&lt;p&gt;multer옵션파일 생성
+```
+import { existsSync, mkdirSync } from ‘fs’;
+import * as multer from ‘multer’;
+import { extname } from ‘path’;&lt;/p&gt;
+</description>
+				
+				<pubDate>Mon, 13 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/nest-008</link>
+				<guid isPermaLink="true">http://localhost:4000/nest-008</guid>
+			</item>
+		
+			<item>
+				<title>Nestjs - 7. Swagger</title>
+				
+					<dc:creator>zaimy</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;7-swagger&quot;&gt;7. Swagger&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-설치&quot;&gt;1) 설치&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add @nestjs/swagger
+yarn add swagger-ui-express
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;2-활용&quot;&gt;2) 활용&lt;/h2&gt;
+&lt;p&gt;main.ts 는 아래와같이 활용
+```
+const app = await NestFactory.create(AppModule);&lt;/p&gt;
+</description>
+				
+				<pubDate>Mon, 13 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/nest-007</link>
+				<guid isPermaLink="true">http://localhost:4000/nest-007</guid>
+			</item>
+		
+			<item>
+				<title>Nestjs - 6. AXIOS 통신</title>
+				
+					<dc:creator>zaimy</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;6-axios-통신&quot;&gt;6. AXIOS 통신&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-설치&quot;&gt;1) 설치&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add axios
+yarn add @nestjs/axios
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;2-nest-기본구성&quot;&gt;2) Nest 기본구성&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { HttpService } from &apos;@nestjs/axios&apos;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const a = await lastValueFrom(this.httpService.get(url));
+console.log(a.data);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+				
+				<pubDate>Mon, 13 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/nest-006</link>
+				<guid isPermaLink="true">http://localhost:4000/nest-006</guid>
+			</item>
+		
+			<item>
+				<title>Nestjs - 5. 스케쥴링</title>
+				
+					<dc:creator>zaimy</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;1-스케쥴링&quot;&gt;1. 스케쥴링&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-설치&quot;&gt;1) 설치&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add @nestjs/schedule
+yarn add @types/cron
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;2-활용&quot;&gt;2) 활용&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nest g mo job
+nest g s job
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;모듈은 아래와같이 작성한다.
+```
+@Module({
+	imports: [ScheduleModule.forRoot()],
+	providers: [JobService],
+})
+export class JobModule {}&lt;/p&gt;
+</description>
+				
+				<pubDate>Mon, 13 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/nest-005</link>
+				<guid isPermaLink="true">http://localhost:4000/nest-005</guid>
+			</item>
+		
+			<item>
 				<title>Yarn 개발 환경구축</title>
 				
 					<dc:creator>zaimy</dc:creator>
@@ -137,7 +243,7 @@ $ nest new 프로젝트명 (yarn선택)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;2-nest-기본구성&quot;&gt;2) Nest 기본구성&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;./assets/img/nest00101.jpg&quot; alt=&quot;ex_screenshot&quot; width=&quot;150&quot; height=&quot;100&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./assets/img/nest00101.JPG&quot; alt=&quot;ex_screenshot&quot; width=&quot;150&quot; height=&quot;100&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;모듈
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nest g mo module-name
@@ -160,7 +266,7 @@ export class CatsModule {}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
     &lt;hr /&gt;
     &lt;h2 id=&quot;3-nest-응용구성&quot;&gt;3) Nest 응용구성&lt;/h2&gt;
-    &lt;p&gt;&lt;img src=&quot;./assets/img/nest00102.jpg&quot; alt=&quot;ex_screenshot&quot; width=&quot;220&quot; height=&quot;200&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;./assets/img/nest00102.JPG&quot; alt=&quot;ex_screenshot&quot; width=&quot;220&quot; height=&quot;200&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;미들웨어
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nest g middleware middleware-name

@@ -3,7 +3,7 @@
   <head>
   <title>
     
-      Nestjs - 3. 외부환경파일 | Zaimy
+      Nestjs - 6. AXIOS 통신 | Zaimy
     
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,24 +32,24 @@
 
   <!-- Use Jekyll SEO plugin -->
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Nestjs - 3. 외부환경파일 | Zaimy</title>
+<title>Nestjs - 6. AXIOS 통신 | Zaimy</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Nestjs - 3. 외부환경파일" />
+<meta property="og:title" content="Nestjs - 6. AXIOS 통신" />
 <meta name="author" content="zaimy" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="3. 외부환경파일 1) 설치 @nestjs/config : 설정 파일을 외부에서 가져오기 위한 nestjs에서 제공되는 모듈 cross-env : os에 종속되지 않고, 플랫폼 표준화를 하기위해 필요한 라이브러리 joi : 형식에 대한 유효성 검사" />
-<meta property="og:description" content="3. 외부환경파일 1) 설치 @nestjs/config : 설정 파일을 외부에서 가져오기 위한 nestjs에서 제공되는 모듈 cross-env : os에 종속되지 않고, 플랫폼 표준화를 하기위해 필요한 라이브러리 joi : 형식에 대한 유효성 검사" />
-<link rel="canonical" href="http://localhost:4000/nest-003" />
-<meta property="og:url" content="http://localhost:4000/nest-003" />
+<meta name="description" content="6. AXIOS 통신 1) 설치 yarn add axios yarn add @nestjs/axios 2) Nest 기본구성 import { HttpService } from &#39;@nestjs/axios&#39;; const a = await lastValueFrom(this.httpService.get(url)); console.log(a.data);" />
+<meta property="og:description" content="6. AXIOS 통신 1) 설치 yarn add axios yarn add @nestjs/axios 2) Nest 기본구성 import { HttpService } from &#39;@nestjs/axios&#39;; const a = await lastValueFrom(this.httpService.get(url)); console.log(a.data);" />
+<link rel="canonical" href="http://localhost:4000/nest-006" />
+<meta property="og:url" content="http://localhost:4000/nest-006" />
 <meta property="og:site_name" content="Zaimy" />
 <meta property="og:image" content="http://localhost:4000/nest_logo.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-06-10T00:00:00+09:00" />
+<meta property="article:published_time" content="2022-06-13T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/nest_logo.png" />
-<meta property="twitter:title" content="Nestjs - 3. 외부환경파일" />
+<meta property="twitter:title" content="Nestjs - 6. AXIOS 통신" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"zaimy"},"dateModified":"2022-06-10T00:00:00+09:00","datePublished":"2022-06-10T00:00:00+09:00","description":"3. 외부환경파일 1) 설치 @nestjs/config : 설정 파일을 외부에서 가져오기 위한 nestjs에서 제공되는 모듈 cross-env : os에 종속되지 않고, 플랫폼 표준화를 하기위해 필요한 라이브러리 joi : 형식에 대한 유효성 검사","headline":"Nestjs - 3. 외부환경파일","image":"http://localhost:4000/nest_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nest-003"},"url":"http://localhost:4000/nest-003"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"zaimy"},"dateModified":"2022-06-13T00:00:00+09:00","datePublished":"2022-06-13T00:00:00+09:00","description":"6. AXIOS 통신 1) 설치 yarn add axios yarn add @nestjs/axios 2) Nest 기본구성 import { HttpService } from &#39;@nestjs/axios&#39;; const a = await lastValueFrom(this.httpService.get(url)); console.log(a.data);","headline":"Nestjs - 6. AXIOS 통신","image":"http://localhost:4000/nest_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nest-006"},"url":"http://localhost:4000/nest-006"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -96,14 +96,14 @@
       <div class="content-wrapper">
         <div class="post-content">
   <h1>
-    Nestjs - 3. 외부환경파일
+    Nestjs - 6. AXIOS 통신
   </h1>
   
     <span class="post-date">
   Written on
   
   June
-  10th,
+  13th,
   2022
   by
   
@@ -118,72 +118,18 @@
     </div>
   
   <article>
-    <h1 id="3-외부환경파일">3. 외부환경파일</h1>
+    <h1 id="6-axios-통신">6. AXIOS 통신</h1>
 <hr />
 <h2 id="1-설치">1) 설치</h2>
-<ul>
-  <li>@nestjs/config : 설정 파일을 외부에서 가져오기 위한 nestjs에서 제공되는 모듈</li>
-  <li>cross-env : os에 종속되지 않고, 플랫폼 표준화를 하기위해 필요한 라이브러리</li>
-  <li>joi : 형식에 대한 유효성 검사</li>
-</ul>
-
-<p>아래와같이 설치한다</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/config 
-yarn add cross-env 
-yarn add joi
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add axios
+yarn add @nestjs/axios
 </code></pre></div></div>
 <hr />
-<h2 id="2-cross-env로-환경변수-주입">2) cross-env로 환경변수 주입</h2>
-<p>package.json에 cross-env NODE_ENV=실행환경 추가</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"start:dev": "cross-env NODE_ENV=dev nest start --watch",
-"start:prod": "cross-env NODE_ENV=prod node dist/main",
+<h2 id="2-nest-기본구성">2) Nest 기본구성</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { HttpService } from '@nestjs/axios';
 </code></pre></div></div>
-<hr />
-<h2 id="3-nestjsconfig로-환경변수-호출">3) @nestjs/config로 환경변수 호출</h2>
-<p>app.module.ts 에 config모듈을 import<br />
-validationSchema 를 통해 문법을 검사</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { ConfigModule } from '@nestjs/config';
-import * as Joi from 'joi';
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>imports: [
-	ConfigModule.forRoot({
-		isGlobal: true,
-		envFilePath: process.env.NODE_ENV === 'dev' ? '.env.dev' : '.env.test',
-		ignoreEnvFile: process.env.NODE_ENV === 'prod',
-		validationSchema: Joi.object({
-			NODE_ENV: Joi.string().valid('dev', 'prod').required(),
-			DB_HOST: Joi.string().required(),
-			DB_PORT: Joi.string().required(),
-			DB_USERNAME: Joi.string().required(),
-			DB_PASSWORD: Joi.string().required(),
-			DB_SID: Joi.string().required(),
-		}),
-    }),
-]
-</code></pre></div></div>
-<p>최상위 디렉토리에 .env.dev 파일생성</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DB_HOST=IP
-DB_PORT=포트
-DB_USERNAME=계정
-DB_PASSWORD=비밀번호
-DB_SID=sid
-</code></pre></div></div>
-<hr />
-<h2 id="4-생성한-환경설정-적용">4) 생성한 환경설정 적용</h2>
-<p>예제로 데이터베이스 설정 항목들을 외부환경설정에거 가져옴</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TypeOrmModule.forRoot({
-	type: 'oracle',
-
-	host: process.env.DB_HOST,
-	port: +process.env.DB_PORT,
-	username: process.env.DB_USERNAME,
-	password: process.env.DB_PASSWORD,
-	sid: process.env.DB_SID,
-	
-	entities: [cm_dsplist_act, CtCtlproc, AiFlashcd],
-	synchronize: false,
-	// logging: true,
-}),
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const a = await lastValueFrom(this.httpService.get(url));
+console.log(a.data);
 </code></pre></div></div>
 
   </article>
@@ -191,8 +137,8 @@ DB_SID=sid
     <div class="post-share">
   <div class="post-date">Feel free to share!</div>
   <div class="sharing-icons">
-    <a href="https://twitter.com/intent/tweet?text=Nestjs - 3. 외부환경파일&amp;url=/nest-003" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=/nest-003&amp;title=Nestjs - 3. 외부환경파일" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://twitter.com/intent/tweet?text=Nestjs - 6. AXIOS 통신&amp;url=/nest-006" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/nest-006&amp;title=Nestjs - 6. AXIOS 통신" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
   </div>
 </div>
 
