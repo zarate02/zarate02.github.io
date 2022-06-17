@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-17T14:22:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zaimy</title><subtitle>Development And Investment Blog</subtitle><author><name>zaimy</name></author><entry><title type="html">투자 - 크록스</title><link href="http://localhost:4000/crox-001" rel="alternate" type="text/html" title="투자 - 크록스" /><published>2022-06-17T00:00:00+09:00</published><updated>2022-06-17T00:00:00+09:00</updated><id>http://localhost:4000/crox-001</id><content type="html" xml:base="http://localhost:4000/crox-001"><![CDATA[<h1 id="크록스">크록스</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-17T15:03:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zaimy</title><subtitle>Development And Investment Blog</subtitle><author><name>zaimy</name></author><entry><title type="html">투자 - 크록스</title><link href="http://localhost:4000/crox-001" rel="alternate" type="text/html" title="투자 - 크록스" /><published>2022-06-17T00:00:00+09:00</published><updated>2022-06-17T00:00:00+09:00</updated><id>http://localhost:4000/crox-001</id><content type="html" xml:base="http://localhost:4000/crox-001"><![CDATA[<h1 id="크록스">크록스</h1>
 <hr />
 <h2 id="1-재무분석">1) 재무분석</h2>
 
@@ -240,6 +240,11 @@
 <ul>
   <li>성장성</li>
 </ul>
+
+<figure style="text-align:center">
+    <img src="assets/img/crox00102.jpg" />
+    <font color="gray">크록스(좌) 헤이듀드(우) 구글트랜드</font> 
+</figure>
 
 <p>이미 10%이상씩 성장하고 있던 회사이다.
 2022년 분기매출기준으로 대략 미국전체 보급률이 20%+@라고 유추해볼수 있다.
