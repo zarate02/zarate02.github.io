@@ -1,4 +1,499 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-13T16:22:20+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zaimy</title><subtitle>Development And Investment Blog</subtitle><author><name>zaimy</name></author><entry><title type="html">Nestjs - 5. 스케쥴링</title><link href="http://localhost:4000/nest-005" rel="alternate" type="text/html" title="Nestjs - 5. 스케쥴링" /><published>2022-06-13T00:00:00+09:00</published><updated>2022-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nest-005</id><content type="html" xml:base="http://localhost:4000/nest-005"><![CDATA[<h1 id="1-스케쥴링">1. 스케쥴링</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-17T12:39:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zaimy</title><subtitle>Development And Investment Blog</subtitle><author><name>zaimy</name></author><entry><title type="html">투자 - 크록스</title><link href="http://localhost:4000/crox-001" rel="alternate" type="text/html" title="투자 - 크록스" /><published>2022-06-17T00:00:00+09:00</published><updated>2022-06-17T00:00:00+09:00</updated><id>http://localhost:4000/crox-001</id><content type="html" xml:base="http://localhost:4000/crox-001"><![CDATA[<h1 id="크록스">크록스</h1>
+<hr />
+<h2 id="1-재무분석">1) 재무분석</h2>
+
+<ul>
+  <li>재무상태표</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>TTM</th>
+      <th>21년</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>현금</td>
+      <td>171,969</td>
+      <td>213,197</td>
+    </tr>
+    <tr>
+      <td>부채</td>
+      <td>3,106,908</td>
+      <td>963,559</td>
+    </tr>
+    <tr>
+      <td>매출채권</td>
+      <td>375,750</td>
+      <td>182,629</td>
+    </tr>
+    <tr>
+      <td>매입채무</td>
+      <td>202,919</td>
+      <td>162,145</td>
+    </tr>
+    <tr>
+      <td>유형자산</td>
+      <td>335,454</td>
+      <td>269,166</td>
+    </tr>
+    <tr>
+      <td>무형자산</td>
+      <td>2,538,447</td>
+      <td>30,402</td>
+    </tr>
+    <tr>
+      <td>재고</td>
+      <td>407,589</td>
+      <td>213,520</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>손익계산서</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>TTM</th>
+      <th>21년</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>매출</td>
+      <td>2,513,466</td>
+      <td>2,313,416</td>
+    </tr>
+    <tr>
+      <td>영업이익</td>
+      <td>677,055</td>
+      <td>683,064</td>
+    </tr>
+    <tr>
+      <td>순이익</td>
+      <td>700,056</td>
+      <td>725,694</td>
+    </tr>
+    <tr>
+      <td>CAPEX</td>
+      <td>87,719</td>
+      <td>55,916</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>가치평가</li>
+</ul>
+
+<p>비즈니스 모델에서 언급할 헤이듀드 인수때문에 발생한 유형자산때문에 RIM을 쓰기 애매함, 그렇기에 DCF를 통하여 가치를 구해냄</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>TTM</th>
+      <th>22년</th>
+      <th>23년</th>
+      <th>24년</th>
+      <th>25년</th>
+      <th>26년</th>
+      <th>27년</th>
+      <th>T</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>할인율</td>
+      <td> </td>
+      <td>0.8945</td>
+      <td>0.8000</td>
+      <td>0.7156</td>
+      <td>0.6400</td>
+      <td>0.5725</td>
+      <td>0.5120</td>
+      <td>0.4580</td>
+    </tr>
+    <tr>
+      <td>성장률</td>
+      <td>10%</td>
+      <td>9%</td>
+      <td>8%</td>
+      <td>7%</td>
+      <td>6%</td>
+      <td>5%</td>
+      <td>4%</td>
+      <td>3%</td>
+    </tr>
+    <tr>
+      <td>매출액</td>
+      <td>2,513,466</td>
+      <td>2,764,813</td>
+      <td>3,013,646</td>
+      <td>3,254,737</td>
+      <td>3,482,569</td>
+      <td>3,691,523</td>
+      <td>3,876,099</td>
+      <td>4,031,143</td>
+    </tr>
+    <tr>
+      <td>마진</td>
+      <td>30%</td>
+      <td>28%</td>
+      <td>26%</td>
+      <td>24%</td>
+      <td>22%</td>
+      <td>20%</td>
+      <td>18%</td>
+      <td>16%</td>
+    </tr>
+    <tr>
+      <td>기타비용</td>
+      <td>10%</td>
+      <td>11%</td>
+      <td>12%</td>
+      <td>13%</td>
+      <td>14%</td>
+      <td>15%</td>
+      <td>16%</td>
+      <td>17%</td>
+    </tr>
+    <tr>
+      <td>FCFF</td>
+      <td>678,636</td>
+      <td>688,991</td>
+      <td>689,522</td>
+      <td>679,589</td>
+      <td>658,902</td>
+      <td>627,559</td>
+      <td>586,066</td>
+      <td>535,336</td>
+    </tr>
+    <tr>
+      <td>PV</td>
+      <td> </td>
+      <td>616,271</td>
+      <td>551,651</td>
+      <td>486,319</td>
+      <td>421,749</td>
+      <td>359,290</td>
+      <td>300,121</td>
+      <td>2,786,448</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>RF 3%, ERP 10%, beta 1.1</li>
+  <li>적정주가 : 42.855 ~ 53.36</li>
+</ul>
+
+<hr />
+<h2 id="2-비즈니스모델-분석">2) 비즈니스모델 분석</h2>
+<figure style="text-align:center">
+    <img src="assets/img/crox00101.png" style="width: 300px; height: 200px" />
+    <font color="gray">헤이듀드</font> 
+</figure>
+
+<ul>
+  <li>사업별</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>비중</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>크록스</td>
+      <td>73%</td>
+    </tr>
+    <tr>
+      <td>헤이듀드</td>
+      <td>27%</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>비중</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>북미</td>
+      <td>58%</td>
+    </tr>
+    <tr>
+      <td>유럽</td>
+      <td>24%</td>
+    </tr>
+    <tr>
+      <td>아시아</td>
+      <td>18%</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>성장성</li>
+</ul>
+
+<p>크록스는 이미 10%이상씩 성장하고 있던 회사
+여기에 헤이듀드라는 새로운 엔진을 부착하며 더욱더 성장하기위한 날개짓을 했다.
+결과론적으로 무리한 인수가 되었지만 그렇다고 잘못되었느냐는 다시 생각해봄직하다.
+헤이듀드는 크록스와 동일하게 높은 마진의 편안함을 목표로 추구한다.
+그리고 기존의 크록스가 편한자리에서 더 편안함을 이라는 가치를 추구했다면
+헤이듀드는 격식있는 자리에서 더 편안함을 이라는 가치를 추구한다.
+시기의 문제가 있긴하지만 비즈니스적으로 카니발라이즈가 일어나지 않는 적절한 인수라고 생각한다.</p>
+
+<ul>
+  <li>영속성</li>
+</ul>
+
+<p>헤이듀드인수로 매우 위험한 수준의 부채를 떠안게 되었다.
+그러나 예상이익이 어느정도 수준이하로 떨어지지않는이상 충분히 감내할 수 있는 범위이며
+향후 1~2년이 회사의 영속성을 좌지우지 할수있는 중요한 시점이 될것이다.</p>
+
+<ul>
+  <li>주주친화</li>
+</ul>
+
+<p>당분간은 부채를 상환해야되기때문에 불가능하지만
+인수전에는 주주들이 걱정할정도로 자사주매입을 적극적으로 하던 극단적인 주주친화적인 회사</p>]]></content><author><name>zaimy</name></author><category term="investment" /><category term="investment" /><summary type="html"><![CDATA[크록스 1) 재무분석]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/crox_logo.jpg" /><media:content medium="image" url="http://localhost:4000/crox_logo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">투자 - 금호석유</title><link href="http://localhost:4000/kumho-001" rel="alternate" type="text/html" title="투자 - 금호석유" /><published>2022-06-15T00:00:00+09:00</published><updated>2022-06-15T00:00:00+09:00</updated><id>http://localhost:4000/kumho-001</id><content type="html" xml:base="http://localhost:4000/kumho-001"><![CDATA[<h1 id="금호석유">금호석유</h1>
+<hr />
+<h2 id="1-재무분석">1) 재무분석</h2>
+
+<ul>
+  <li>재무상태표</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>값</th>
+      <th>비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>매출채권</td>
+      <td>961,853,624,280</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>재고자산</td>
+      <td>785,230,159,543</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>비유동자산</td>
+      <td>3,441,723,115,220</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>현금</td>
+      <td>840,731,497,555</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>부채</td>
+      <td>3,181,409,553,920</td>
+      <td>여유있게 전체부채</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>손익계산서</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>값</th>
+      <th>비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>영업이익</td>
+      <td>2,406,835,526,956</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>지분법손익</td>
+      <td>188,610,158,853</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>당기순이익</td>
+      <td>1,965,576,708,770</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>매출채권증가분</td>
+      <td>250,378,693,753</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>재고증가분</td>
+      <td>248,466,254,714</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>유형자산취득</td>
+      <td>353,775,840,485</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>보수적이익</td>
+      <td>1,112,955,919,818</td>
+      <td>감가상각 제외한 FCF</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>가치평가</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>값</th>
+      <th>비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>자기자본</td>
+      <td>111,099,377,008</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>보수적PBR</td>
+      <td>1.579610012</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>보수적PER</td>
+      <td>4.042327961</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>RIM</td>
+      <td>11,129,559,198,180</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>SRIM</td>
+      <td>5,056,510,270,812</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>ROE10%기준 SRIM</td>
+      <td>3,607,629,867,392</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>시총</td>
+      <td>4,498,932,834,000</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h2 id="2-비즈니스모델-분석">2) 비즈니스모델 분석</h2>
+<figure style="text-align:center">
+    <img src="assets/img/kumho00101.png" style="width: 300px; height: 200px" />
+    <font color="gray">NB라텍스</font> 
+</figure>
+
+<ul>
+  <li>사업별</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>비중</th>
+      <th>상세</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>합성고무</td>
+      <td>37%</td>
+      <td>논란의 NB라텍스가 포함</td>
+    </tr>
+    <tr>
+      <td>합성수지</td>
+      <td>22%</td>
+      <td>각종 편의,부품용 플라스틱</td>
+    </tr>
+    <tr>
+      <td>금호피앤비화학</td>
+      <td>32%</td>
+      <td>각종 화학제품</td>
+    </tr>
+    <tr>
+      <td>금호폴리켐</td>
+      <td>7%</td>
+      <td>자동차부품에 들어가는 재료</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>성장성</li>
+</ul>
+
+<p>코로나로 인한 NB라텍스 수요 폭증으로 어마어마한 실적을 달성
+그러나 코로나수혜기업과 동일하게 선반영된만큼의 주가가 빠졌다
+NB라텍스에대한 논란은 지속되고 있다.
+코로나 수혜로 그칠것인가, 전세계 보건위생수준이 올라가면서 수요가 어느정도 유지될것인가
+당장은 수출입 무역통계기준으로 중량은 50%, 가격은 30% 정도로 빠진것이 확인된다
+그렇기에 밸류측정을 할때 어느정도 감안을해서 ROE를 생각해볼 필요가 있다.
+그럼에도 불구하고 이 기업은 모회사와 자회사들이 모두 흑자를 내고있고 그런 기조를 꾸준히 이어왔다.
+파괴적인 혁신으로 현시점의 ROE를 유지하거나 더 증가시키지는 못하겠지만 최소한 코로나 이전수준의 영업능력을 보여주지 못할 이유는 없어보인다.</p>
+
+<ul>
+  <li>영속성</li>
+</ul>
+
+<p>다양한 사업을 하고있으나
+핵심은 향후 비전이 밝은 화학, 고무관련된 소재부품이 메인이다.
+그것도 단하나의 특별한 제품이 있는것이 아니라 제품 포트폴리오가 탄탄하다.
+아쉬운건 지금 핵심으로 간주되는 NB라텍스가 향후 어떻게 될지 미지수라는점</p>
+
+<ul>
+  <li>주주친화</li>
+</ul>
+
+<p>경영권 분쟁이슈가 있지만
+그때 논쟁이 사측은 배당을 6% 하고 싶어하고 자사주 매입도 1%나 한다는거였는데
+대주주쪽에서 부족하다는 논쟁이였다.
+다행인지는 모르지만 국민연금이 적지않은 비중으로 끼어있다보니 분쟁권이슈가 그나마 상식적으로 잘 종료되었다고 생각한다.
+우선주도 있는데 배당관점이 아니라 시세차익으로 먹을 룸이 좀더 커보이기에 본주를 선택하는편이 나을거같다.</p>]]></content><author><name>zaimy</name></author><category term="investment" /><category term="investment" /><summary type="html"><![CDATA[금호석유 1) 재무분석]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/kumho_logo.jpg" /><media:content medium="image" url="http://localhost:4000/kumho_logo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 5. 스케쥴링</title><link href="http://localhost:4000/nest-005" rel="alternate" type="text/html" title="Nestjs - 5. 스케쥴링" /><published>2022-06-13T00:00:00+09:00</published><updated>2022-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nest-005</id><content type="html" xml:base="http://localhost:4000/nest-005"><![CDATA[<h1 id="1-스케쥴링">1. 스케쥴링</h1>
 <hr />
 <h2 id="1-설치">1) 설치</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/schedule
@@ -105,7 +600,16 @@ yarn add @nestjs/axios
 </code></pre></div></div>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const a = await lastValueFrom(this.httpService.get(url));
 console.log(a.data);
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[6. AXIOS 통신 1) 설치 yarn add axios yarn add @nestjs/axios 2) Nest 기본구성 import { HttpService } from '@nestjs/axios'; const a = await lastValueFrom(this.httpService.get(url)); console.log(a.data);]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 4. 로그</title><link href="http://localhost:4000/nest-004" rel="alternate" type="text/html" title="Nestjs - 4. 로그" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/nest-004</id><content type="html" xml:base="http://localhost:4000/nest-004"><![CDATA[<h1 id="4-로그">4. 로그</h1>
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[6. AXIOS 통신 1) 설치 yarn add axios yarn add @nestjs/axios 2) Nest 기본구성 import { HttpService } from '@nestjs/axios'; const a = await lastValueFrom(this.httpService.get(url)); console.log(a.data);]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Yarn 개발 환경구축</title><link href="http://localhost:4000/yarn-001" rel="alternate" type="text/html" title="Yarn 개발 환경구축" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/yarn-001</id><content type="html" xml:base="http://localhost:4000/yarn-001"><![CDATA[<h1 id="1-yarn-설치">1. Yarn 설치</h1>
+<p>nodejs 설치시 자동으로 설치됨 (https://nodejs.org/ko/)</p>
+
+<h1 id="2-yarn-모듈추가">2. Yarn 모듈추가</h1>
+<p>아래와 같은 형식으로 모듈을 추가한다</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/cli
+</code></pre></div></div>
+<p>아래와 같은 형식으로 프로젝트를 실행한다</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn start
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="yarn" /><summary type="html"><![CDATA[1. Yarn 설치 nodejs 설치시 자동으로 설치됨 (https://nodejs.org/ko/)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/yarn_logo.jpeg" /><media:content medium="image" url="http://localhost:4000/yarn_logo.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 4. 로그</title><link href="http://localhost:4000/nest-004" rel="alternate" type="text/html" title="Nestjs - 4. 로그" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/nest-004</id><content type="html" xml:base="http://localhost:4000/nest-004"><![CDATA[<h1 id="4-로그">4. 로그</h1>
 <hr />
 <h2 id="1-설치">1) 설치</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add nest-winston
@@ -179,16 +683,7 @@ main에 기본 로거를 대체했기에 기본로거를 쓰듯이 쓰면됨</p>
 ) {}
 </code></pre></div></div>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.logger.log('ttt');
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[4. 로그 1) 설치 yarn add nest-winston yarn add winston yarn add winston-daily-rotate-file 2) 설정 로그레벨은 아래와 같다 { error: 0, warn: 1, info: 2, http: 3, verbose: 4, debug: 5, silly: 6 } 아래처럼 main.ts에 로그저장형태와 로그레벨 등을 설정한다 import { utilities, WinstonModule } from 'nest-winston'; import { format, transports } from 'winston'; import 'winston-daily-rotate-file'; ``` const app = await NestFactory.create(AppModule, { logger: WinstonModule.createLogger({ transports: [ new transports.DailyRotateFile({ level: process.env.NODE_ENV === ‘dev’ ? ‘info’ : ‘silly’, format: format.combine( format.timestamp({ format: ‘YYYY-MM-DD HH:mm:ss’, }), format.printf( (info) =&gt; [${info.timestamp}] ${process.env.APP_ENV}.${info.level}: ${info.message}, ), ), filename: ‘logs/%DATE%.log’, datePattern: ‘YYYY-MM-DD’, zippedArchive: true, maxSize: ‘20m’, maxFiles: ‘14d’, }),]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Yarn 개발 환경구축</title><link href="http://localhost:4000/yarn-001" rel="alternate" type="text/html" title="Yarn 개발 환경구축" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/yarn-001</id><content type="html" xml:base="http://localhost:4000/yarn-001"><![CDATA[<h1 id="1-yarn-설치">1. Yarn 설치</h1>
-<p>nodejs 설치시 자동으로 설치됨 (https://nodejs.org/ko/)</p>
-
-<h1 id="2-yarn-모듈추가">2. Yarn 모듈추가</h1>
-<p>아래와 같은 형식으로 모듈을 추가한다</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/cli
-</code></pre></div></div>
-<p>아래와 같은 형식으로 프로젝트를 실행한다</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn start
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="yarn" /><summary type="html"><![CDATA[1. Yarn 설치 nodejs 설치시 자동으로 설치됨 (https://nodejs.org/ko/)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/yarn_logo.jpeg" /><media:content medium="image" url="http://localhost:4000/yarn_logo.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 3. 외부환경파일</title><link href="http://localhost:4000/nest-003" rel="alternate" type="text/html" title="Nestjs - 3. 외부환경파일" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/nest-003</id><content type="html" xml:base="http://localhost:4000/nest-003"><![CDATA[<h1 id="3-외부환경파일">3. 외부환경파일</h1>
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[4. 로그 1) 설치 yarn add nest-winston yarn add winston yarn add winston-daily-rotate-file 2) 설정 로그레벨은 아래와 같다 { error: 0, warn: 1, info: 2, http: 3, verbose: 4, debug: 5, silly: 6 } 아래처럼 main.ts에 로그저장형태와 로그레벨 등을 설정한다 import { utilities, WinstonModule } from 'nest-winston'; import { format, transports } from 'winston'; import 'winston-daily-rotate-file'; ``` const app = await NestFactory.create(AppModule, { logger: WinstonModule.createLogger({ transports: [ new transports.DailyRotateFile({ level: process.env.NODE_ENV === ‘dev’ ? ‘info’ : ‘silly’, format: format.combine( format.timestamp({ format: ‘YYYY-MM-DD HH:mm:ss’, }), format.printf( (info) =&gt; [${info.timestamp}] ${process.env.APP_ENV}.${info.level}: ${info.message}, ), ), filename: ‘logs/%DATE%.log’, datePattern: ‘YYYY-MM-DD’, zippedArchive: true, maxSize: ‘20m’, maxFiles: ‘14d’, }),]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 3. 외부환경파일</title><link href="http://localhost:4000/nest-003" rel="alternate" type="text/html" title="Nestjs - 3. 외부환경파일" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/nest-003</id><content type="html" xml:base="http://localhost:4000/nest-003"><![CDATA[<h1 id="3-외부환경파일">3. 외부환경파일</h1>
 <hr />
 <h2 id="1-설치">1) 설치</h2>
 <ul>
@@ -260,7 +755,8 @@ DB_SID=sid
 <p>오라클 연결시 Oracle Client 설치가 필요하다 
 (https://www.oracle.com/kr/database/technologies/instant-client/downloads.html)
 그후 아래와 같이 typeORM을 다운로드한다</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/typeorm typeorm oracle
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add oracledb
+yarn add @nestjs/typeorm typeorm oracle
 </code></pre></div></div>
 <p>설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다</p>
 
@@ -394,315 +890,4 @@ export class 파스칼케이스파일명 {
 		});
 	});
 }
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[2. 데이터베이스 (오라클 기준) 1) TypeORM 설치 오라클 연결시 Oracle Client 설치가 필요하다 (https://www.oracle.com/kr/database/technologies/instant-client/downloads.html) 그후 아래와 같이 typeORM을 다운로드한다 yarn add @nestjs/typeorm typeorm oracle 설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">투자 - 빅솔론</title><link href="http://localhost:4000/bixolon-001" rel="alternate" type="text/html" title="투자 - 빅솔론" /><published>2022-06-08T00:00:00+09:00</published><updated>2022-06-08T00:00:00+09:00</updated><id>http://localhost:4000/bixolon-001</id><content type="html" xml:base="http://localhost:4000/bixolon-001"><![CDATA[<h1 id="빅솔론">빅솔론</h1>
-<hr />
-<h2 id="1-재무분석">1) 재무분석</h2>
-
-<ul>
-  <li>재무상태표</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>값</th>
-      <th>비고</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>매출채권</td>
-      <td>22,507,508,509</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>매입채무</td>
-      <td>16,312,956,576</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>재고자산</td>
-      <td>35,794,191,076</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>무형자산</td>
-      <td>1,258,066,311</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>유형자산</td>
-      <td>15,176,174,331</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>현금</td>
-      <td>65,674,617,801</td>
-      <td>현금성자산+단기투자상품</td>
-    </tr>
-    <tr>
-      <td>부채</td>
-      <td>12,998,224,444</td>
-      <td>총부채-매입채무</td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>손익계산서</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>값</th>
-      <th>비고</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>영업이익</td>
-      <td>14,012,407,399</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>금융수익</td>
-      <td>16,472,532,072</td>
-      <td>투자성공과 환차익</td>
-    </tr>
-    <tr>
-      <td>당기순이익</td>
-      <td>25,857,297,635</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>영업순이익</td>
-      <td>9,384,765,563</td>
-      <td>당기순이익-금융수익</td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>가치평가</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>값</th>
-      <th>비고</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>투하자본</td>
-      <td>58,422,983,651</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>자기자본</td>
-      <td>111,099,377,008</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>보수적PBR</td>
-      <td>1.19</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>보수적PER</td>
-      <td>14.04</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>주가</td>
-      <td>6,850</td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-<h2 id="2-비즈니스모델-분석">2) 비즈니스모델 분석</h2>
-<figure style="text-align:center">
-    <img src="assets/img/bixolon00101.png" style="width: 300px; height: 200px" />
-    <font color="gray">프린팅 매커니즘</font> 
-</figure>
-
-<ul>
-  <li>사업별</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>비중</th>
-      <th>상세</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>포스프린터</td>
-      <td>36%</td>
-      <td>국내, 해외 모두 성장이 정체 혹은 감소</td>
-    </tr>
-    <tr>
-      <td>모바일프린터</td>
-      <td>21%</td>
-      <td>배달산업에 맞춰 소폭성장중인 캐쉬플로우</td>
-    </tr>
-    <tr>
-      <td>라벨프린터</td>
-      <td>25%</td>
-      <td>유통산업과 발맞춰 급격히 성장중인 캐쉬플로우</td>
-    </tr>
-    <tr>
-      <td>프린팅매커니즘</td>
-      <td>7%</td>
-      <td>매해 비중이 증가하고 있으며 국내 매출증가중<br />수출비중은 감소하고 있지만 비중이 크지않음<br />향후 키오스크기술의 핵심</td>
-    </tr>
-  </tbody>
-</table>
-
-<ul>
-  <li>성장성</li>
-</ul>
-
-<p>비대면 코로나시대동안 포스프린터산업이 사양화되는 방향성을 보이지만 
-유통산업 부흥으로 라벨프린터시장의 급격한 성장의 수혜를 받음<br />
-그리고 향후 성장동력으로 키오스크산업 진출을 준비중
-그러나 신사업 개척보다는 매출에서 중국비중이 낮기에 미중블록화로인한 영업망개선이 더 기대됨</p>
-
-<ul>
-  <li>영속성</li>
-</ul>
-
-<p>중기적으로 산업용소형프린트는 유통산업과 맞물려 축소되기 힘들며
-장기적으로는 임금상승으로인한 키오스크산업의 비전과 맞물려 지속적인 사업을 유지할 것으로 기대</p>
-
-<ul>
-  <li>주주친화</li>
-</ul>
-
-<p>기대배당률 3.65%의 매년 배당이성장하는 배당성장주</p>]]></content><author><name>zaimy</name></author><category term="investment" /><category term="investment" /><summary type="html"><![CDATA[빅솔론 1) 재무분석]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/bixolon_logo.jpg" /><media:content medium="image" url="http://localhost:4000/bixolon_logo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 1. 프로젝트 생성과 구성</title><link href="http://localhost:4000/nest-001" rel="alternate" type="text/html" title="Nestjs - 1. 프로젝트 생성과 구성" /><published>2022-06-08T00:00:00+09:00</published><updated>2022-06-08T00:00:00+09:00</updated><id>http://localhost:4000/nest-001</id><content type="html" xml:base="http://localhost:4000/nest-001"><![CDATA[<h1 id="1-프로젝트-생성과-구성">1. 프로젝트 생성과 구성</h1>
-<hr />
-<h2 id="1-프로젝트-생성">1) 프로젝트 생성</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn add @nestjs/cli
-$ nest new 프로젝트명 (yarn선택)
-</code></pre></div></div>
-<hr />
-<h2 id="2-nest-기본구성">2) Nest 기본구성</h2>
-<p><img src="./assets/img/nest00101.JPG" alt="ex_screenshot" width="150" height="100" /></p>
-<ul>
-  <li>모듈
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g mo module-name
-</code></pre></div>    </div>
-    <p>외부로 서비스를 공개하고 싶을경우 export 추가</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Module({
-  controllers: [CatsController],
-  providers: [CatsService],
-  exports: [CatsService],
-})
-export class CatsModule {}
-</code></pre></div>    </div>
-  </li>
-  <li>컨트롤러
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g co controller-name
-</code></pre></div>    </div>
-  </li>
-  <li>서비스
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g service service-name
-</code></pre></div>    </div>
-    <hr />
-    <h2 id="3-nest-응용구성">3) Nest 응용구성</h2>
-    <p><img src="./assets/img/nest00102.JPG" alt="ex_screenshot" width="220" height="200" /></p>
-  </li>
-  <li>미들웨어
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g middleware middleware-name
-</code></pre></div>    </div>
-    <p>적용시 모듈을 아래와같이 수정</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export class AppModule {}
-=&gt;
-export class AppModule implements NestModule {
-configure(consumer: MiddlewareConsumer) {
-  consumer.apply(MiddlewareNameMiddleware).forRoutes('*');
-}
-}
-</code></pre></div>    </div>
-  </li>
-  <li>필터
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g filter filter-name
-</code></pre></div>    </div>
-    <p>개별 적용시 컨트롤러를 아래와같이 수정</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Get()
-@UseFilters(HttpExceptionFilter)
-getAllCat() {
-  throw new HttpException({ koko: 'fail' }, HttpStatus.FORBIDDEN);
-  return 'all cat';
-}
-</code></pre></div>    </div>
-    <p>전체 적용시 메인을 아래와같이 수정</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const app = await NestFactory.create(AppModule);
-app.useGlobalFilters(new HttpExceptionFilter());
-await app.listen(3000);
-</code></pre></div>    </div>
-  </li>
-  <li>파이프
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g pipe pipe-name
-</code></pre></div>    </div>
-    <p>파라메터 적용시 아래와같이 수정</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Get(':id')
-getOneCat(@Param('id', ParseIntPipe) id: number) {
-  return 'one cat';
-}
-</code></pre></div>    </div>
-    <p>커스텀 파이프작성시 아래와 같이 생성</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Injectable()
-export class PostiveIntPipe implements PipeTransform {
-  transform(value: any, metadata: ArgumentMetadata) {
-      if (value &lt; 0) {
-        throw new HttpException();
-      }
-      return value;
-  }
-}
-</code></pre></div>    </div>
-  </li>
-  <li>인터셉터(AOP)
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nest g interceptor interceptor-name
-</code></pre></div>    </div>
-    <p>인터셉터 적용시 아래와 같이 사용</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Get('test2')
-@UseInterceptors(InterceptorNameInterceptor)
-getHello2(@Param() param: { id: string }): string {
-  return this.catsService.getHello();
-}
-</code></pre></div>    </div>
-    <p>인터셉터 구현</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Injectable()
-export class InterceptorNameInterceptor implements NestInterceptor {
-  intercept(context: ExecutionContext, next: CallHandler): Observable&lt;any&gt; {
-      return next.handle().pipe(map((data) =&gt; ({ success: true, data })));
-  }
-}
-</code></pre></div>    </div>
-  </li>
-  <li>라이프사이클
-    <ul>
-      <li>글로벌 -&gt; 개별</li>
-      <li>request -&gt; middleware -&gt; guard -&gt; interceptor -&gt; pipe -&gt; controller</li>
-    </ul>
-  </li>
-</ul>
-
-<hr />
-<h2 id="4-실행">4) 실행</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn start
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn start:dev
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[1. 프로젝트 생성과 구성 1) 프로젝트 생성 $ yarn add @nestjs/cli $ nest new 프로젝트명 (yarn선택) 2) Nest 기본구성 모듈 $ nest g mo module-name 외부로 서비스를 공개하고 싶을경우 export 추가 @Module({ controllers: [CatsController], providers: [CatsService], exports: [CatsService], }) export class CatsModule {} 컨트롤러 $ nest g co controller-name 서비스 $ nest g service service-name 3) Nest 응용구성 미들웨어 $ nest g middleware middleware-name 적용시 모듈을 아래와같이 수정 export class AppModule {} =&gt; export class AppModule implements NestModule { configure(consumer: MiddlewareConsumer) { consumer.apply(MiddlewareNameMiddleware).forRoutes('*'); } } 필터 $ nest g filter filter-name 개별 적용시 컨트롤러를 아래와같이 수정 @Get() @UseFilters(HttpExceptionFilter) getAllCat() { throw new HttpException({ koko: 'fail' }, HttpStatus.FORBIDDEN); return 'all cat'; } 전체 적용시 메인을 아래와같이 수정 const app = await NestFactory.create(AppModule); app.useGlobalFilters(new HttpExceptionFilter()); await app.listen(3000);]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[2. 데이터베이스 (오라클 기준) 1) TypeORM 설치 오라클 연결시 Oracle Client 설치가 필요하다 (https://www.oracle.com/kr/database/technologies/instant-client/downloads.html) 그후 아래와 같이 typeORM을 다운로드한다 yarn add oracledb yarn add @nestjs/typeorm typeorm oracle 설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
