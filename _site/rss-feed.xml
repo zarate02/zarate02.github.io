@@ -7,6 +7,22 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>투자 - 효성TNC</title>
+				
+					<dc:creator>zaimy</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;효성tnc&quot;&gt;효성TNC&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-재무분석&quot;&gt;1) 재무분석&lt;/h2&gt;
+</description>
+				
+				<pubDate>Mon, 20 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/htnc-001</link>
+				<guid isPermaLink="true">http://localhost:4000/htnc-001</guid>
+			</item>
+		
+			<item>
 				<title>투자 - 크록스</title>
 				
 					<dc:creator>zaimy</dc:creator>
@@ -237,29 +253,6 @@ const app = await NestFactory.create(AppModule, {
 				<pubDate>Fri, 10 Jun 2022 00:00:00 +0900</pubDate>
 				<link>http://localhost:4000/nest-003</link>
 				<guid isPermaLink="true">http://localhost:4000/nest-003</guid>
-			</item>
-		
-			<item>
-				<title>Nestjs - 2. 데이터베이스</title>
-				
-					<dc:creator>zaimy</dc:creator>
-				
-				
-					<description>&lt;h1 id=&quot;2-데이터베이스-오라클-기준&quot;&gt;2. 데이터베이스 (오라클 기준)&lt;/h1&gt;
-&lt;hr /&gt;
-&lt;h2 id=&quot;1-typeorm-설치&quot;&gt;1) TypeORM 설치&lt;/h2&gt;
-&lt;p&gt;오라클 연결시 Oracle Client 설치가 필요하다 
-(https://www.oracle.com/kr/database/technologies/instant-client/downloads.html)
-그후 아래와 같이 typeORM을 다운로드한다&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add oracledb
-yarn add @nestjs/typeorm typeorm oracle
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다&lt;/p&gt;
-</description>
-				
-				<pubDate>Thu, 09 Jun 2022 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/nest-002</link>
-				<guid isPermaLink="true">http://localhost:4000/nest-002</guid>
 			</item>
 		
 	</channel>

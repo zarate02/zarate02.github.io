@@ -1,4 +1,200 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-17T15:05:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zaimy</title><subtitle>Development And Investment Blog</subtitle><author><name>zaimy</name></author><entry><title type="html">투자 - 크록스</title><link href="http://localhost:4000/crox-001" rel="alternate" type="text/html" title="투자 - 크록스" /><published>2022-06-17T00:00:00+09:00</published><updated>2022-06-17T00:00:00+09:00</updated><id>http://localhost:4000/crox-001</id><content type="html" xml:base="http://localhost:4000/crox-001"><![CDATA[<h1 id="크록스">크록스</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-20T13:45:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zaimy</title><subtitle>Development And Investment Blog</subtitle><author><name>zaimy</name></author><entry><title type="html">투자 - 효성TNC</title><link href="http://localhost:4000/htnc-001" rel="alternate" type="text/html" title="투자 - 효성TNC" /><published>2022-06-20T00:00:00+09:00</published><updated>2022-06-20T00:00:00+09:00</updated><id>http://localhost:4000/htnc-001</id><content type="html" xml:base="http://localhost:4000/htnc-001"><![CDATA[<h1 id="효성tnc">효성TNC</h1>
+<hr />
+<h2 id="1-재무분석">1) 재무분석</h2>
+
+<ul>
+  <li>재무상태표</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>22년 1분기</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>현금</td>
+      <td>294,558,898,345</td>
+    </tr>
+    <tr>
+      <td>부채</td>
+      <td>3,395,293,796,795</td>
+    </tr>
+    <tr>
+      <td>매출채권</td>
+      <td>1,507,841,627,400</td>
+    </tr>
+    <tr>
+      <td>매입채무</td>
+      <td>1,390,915,308,752</td>
+    </tr>
+    <tr>
+      <td>유형자산</td>
+      <td>1,610,698,790,568</td>
+    </tr>
+    <tr>
+      <td>무형자산</td>
+      <td>26,458,344,134</td>
+    </tr>
+    <tr>
+      <td>재고</td>
+      <td>1,065,604,554,199</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>손익계산서</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>21년</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>매출</td>
+      <td>8,596,030,165,373</td>
+    </tr>
+    <tr>
+      <td>영업이익</td>
+      <td>1,423,650,756,975</td>
+    </tr>
+    <tr>
+      <td>순이익</td>
+      <td>1,007,902,535,415</td>
+    </tr>
+    <tr>
+      <td>CAPEX</td>
+      <td>382,969,956,403</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>가치평가</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>21년</th>
+      <th>비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>보수적PBR</td>
+      <td>1.45</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>보수적PER</td>
+      <td>2.57</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>ROE</td>
+      <td>56%</td>
+      <td>평균 29%</td>
+    </tr>
+    <tr>
+      <td>자산회전율</td>
+      <td>189%</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>재무레버리지</td>
+      <td>270%</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>RIM</td>
+      <td>1,444,035</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>SRIM</td>
+      <td>573,145</td>
+      <td>평균 386,397</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>적정주가 : 386,397~1,444,035</li>
+</ul>
+
+<hr />
+<h2 id="2-비즈니스모델-분석">2) 비즈니스모델 분석</h2>
+<figure style="text-align:center">
+    <img src="assets/img/htnc00101.jpg" />
+    <font color="gray">리젠</font> 
+</figure>
+
+<ul>
+  <li>사업별</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>비중</th>
+      <th>상세</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>섬유</td>
+      <td>59%</td>
+      <td>스판덱스와 폴리에스터, 나일론</td>
+    </tr>
+    <tr>
+      <td>무역</td>
+      <td>41%</td>
+      <td>철강, 화학</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>성장성</li>
+</ul>
+
+<p>21년에 폭발적인 성장세를 보여줬으나 향후 인플레이션에서 가장 안좋은 시장이 의류임을 감안해봤을때 냉정하게 장미빛전망만을 하기 어려우며 그걸 반영 본사의 영업보고서의 내용이다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2022년에는 미국의 통화 유동성 테이퍼링과 기준금리 인상 등 긴축전환 움직임으로 세계경제의 연간 성장세가 
+2021년 대비 둔화될 전망이며, 중국의 특정 산업군들에 대한 선별 규제 등으로 인해 국가별 성장회복 속도에 
+상당한 격차가 예상됩니다. 국내 경제 역시 물가상승 압력 증가 등으로 2021년에 이은 기준금리 인상이 전망되며, 
+전년도의 성장세는 둔화될 가능성이 높아 경제 성장을 낙관하기는 어려운 상황입니다
+</code></pre></div></div>
+<p>앞으로 미래가 어렵다는걸 본인들이 자각하고 있다는건 그에대비할 것이고 지금의 성장세를 유지하지는 못해도 할인율 이상의 성장률을 기대해봄직하다.<br />
+단기적으로는 트랜드가 되고있는 애슬레저의 수혜를 받고 이것이 아직 수그러들 단계는 아니라는것<br />
+중장기적으로는 친환경소재에대해 초점을 맞추고 준비중이다.<br />
+물론 성공여부는 알수없지만 나쁘지않은 준비라고 생각</p>
+
+<ul>
+  <li>영속성</li>
+</ul>
+
+<p>재무레버리지가 높지만 전체적인 부채수준은 우려할 수준은 아니다.<br />
+누구든 의복은 반드시 입어야되며 효성TNC는 트랜드에 영향을 상대적으로 덜 받는 소재기업이므로 다른 사이클을 타는 기업들에비해 상대적으로 강점이 있다.<br />
+그렇다고 인플레이션에서 자유로운건 아니지만 그 피해를 최소화 할수만 있더라도 향후 벌어질 어려운 무역환경, 물가상승에서 살아남을 수 있을 것이라 생각한다.</p>
+
+<ul>
+  <li>주주친화</li>
+</ul>
+
+<p>10%이상의 배당금이 지금되었으며
+냉정히 이것이 유지되기는 힘들어 보인다.
+하지만 주주친화적인 행보임에는 틀림없다.
+배당컷이되는 시점에서 주가가 크게 흔들릴 수 있으나 그때가 기회일 수도 있다</p>]]></content><author><name>zaimy</name></author><category term="investment" /><category term="investment" /><summary type="html"><![CDATA[효성TNC 1) 재무분석]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/htnc_logo.jpg" /><media:content medium="image" url="http://localhost:4000/htnc_logo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">투자 - 크록스</title><link href="http://localhost:4000/crox-001" rel="alternate" type="text/html" title="투자 - 크록스" /><published>2022-06-17T00:00:00+09:00</published><updated>2022-06-17T00:00:00+09:00</updated><id>http://localhost:4000/crox-001</id><content type="html" xml:base="http://localhost:4000/crox-001"><![CDATA[<h1 id="크록스">크록스</h1>
 <hr />
 <h2 id="1-재무분석">1) 재무분석</h2>
 
@@ -525,7 +721,19 @@ export class JobService {
 	}
 }
 
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[1. 스케쥴링 1) 설치 yarn add @nestjs/schedule yarn add @types/cron 2) 활용 nest g mo job nest g s job 모듈은 아래와같이 작성한다. ``` @Module({ imports: [ScheduleModule.forRoot()], providers: [JobService], }) export class JobModule {}]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 8. 첨부파일</title><link href="http://localhost:4000/nest-008" rel="alternate" type="text/html" title="Nestjs - 8. 첨부파일" /><published>2022-06-13T00:00:00+09:00</published><updated>2022-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nest-008</id><content type="html" xml:base="http://localhost:4000/nest-008"><![CDATA[<h1 id="8-첨부파일">8. 첨부파일</h1>
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[1. 스케쥴링 1) 설치 yarn add @nestjs/schedule yarn add @types/cron 2) 활용 nest g mo job nest g s job 모듈은 아래와같이 작성한다. ``` @Module({ imports: [ScheduleModule.forRoot()], providers: [JobService], }) export class JobModule {}]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 6. AXIOS 통신</title><link href="http://localhost:4000/nest-006" rel="alternate" type="text/html" title="Nestjs - 6. AXIOS 통신" /><published>2022-06-13T00:00:00+09:00</published><updated>2022-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nest-006</id><content type="html" xml:base="http://localhost:4000/nest-006"><![CDATA[<h1 id="6-axios-통신">6. AXIOS 통신</h1>
+<hr />
+<h2 id="1-설치">1) 설치</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add axios
+yarn add @nestjs/axios
+</code></pre></div></div>
+<hr />
+<h2 id="2-nest-기본구성">2) Nest 기본구성</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { HttpService } from '@nestjs/axios';
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const a = await lastValueFrom(this.httpService.get(url));
+console.log(a.data);
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[6. AXIOS 통신 1) 설치 yarn add axios yarn add @nestjs/axios 2) Nest 기본구성 import { HttpService } from '@nestjs/axios'; const a = await lastValueFrom(this.httpService.get(url)); console.log(a.data);]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 8. 첨부파일</title><link href="http://localhost:4000/nest-008" rel="alternate" type="text/html" title="Nestjs - 8. 첨부파일" /><published>2022-06-13T00:00:00+09:00</published><updated>2022-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nest-008</id><content type="html" xml:base="http://localhost:4000/nest-008"><![CDATA[<h1 id="8-첨부파일">8. 첨부파일</h1>
 <hr />
 <h2 id="1-설치">1) 설치</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @types/multer
@@ -587,19 +795,73 @@ const document = SwaggerModule.createDocument(app, config);
 SwaggerModule.setup('api', app, document);
 
 await app.listen(3000);
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[7. Swagger 1) 설치 yarn add @nestjs/swagger yarn add swagger-ui-express 2) 활용 main.ts 는 아래와같이 활용 ``` const app = await NestFactory.create(AppModule);]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 6. AXIOS 통신</title><link href="http://localhost:4000/nest-006" rel="alternate" type="text/html" title="Nestjs - 6. AXIOS 통신" /><published>2022-06-13T00:00:00+09:00</published><updated>2022-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nest-006</id><content type="html" xml:base="http://localhost:4000/nest-006"><![CDATA[<h1 id="6-axios-통신">6. AXIOS 통신</h1>
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[7. Swagger 1) 설치 yarn add @nestjs/swagger yarn add swagger-ui-express 2) 활용 main.ts 는 아래와같이 활용 ``` const app = await NestFactory.create(AppModule);]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 3. 외부환경파일</title><link href="http://localhost:4000/nest-003" rel="alternate" type="text/html" title="Nestjs - 3. 외부환경파일" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/nest-003</id><content type="html" xml:base="http://localhost:4000/nest-003"><![CDATA[<h1 id="3-외부환경파일">3. 외부환경파일</h1>
 <hr />
 <h2 id="1-설치">1) 설치</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add axios
-yarn add @nestjs/axios
+<ul>
+  <li>@nestjs/config : 설정 파일을 외부에서 가져오기 위한 nestjs에서 제공되는 모듈</li>
+  <li>cross-env : os에 종속되지 않고, 플랫폼 표준화를 하기위해 필요한 라이브러리</li>
+  <li>joi : 형식에 대한 유효성 검사</li>
+</ul>
+
+<p>아래와같이 설치한다</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/config 
+yarn add cross-env 
+yarn add joi
 </code></pre></div></div>
 <hr />
-<h2 id="2-nest-기본구성">2) Nest 기본구성</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { HttpService } from '@nestjs/axios';
+<h2 id="2-cross-env로-환경변수-주입">2) cross-env로 환경변수 주입</h2>
+<p>package.json에 cross-env NODE_ENV=실행환경 추가</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"start:dev": "cross-env NODE_ENV=dev nest start --watch",
+"start:prod": "cross-env NODE_ENV=prod node dist/main",
 </code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const a = await lastValueFrom(this.httpService.get(url));
-console.log(a.data);
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[6. AXIOS 통신 1) 설치 yarn add axios yarn add @nestjs/axios 2) Nest 기본구성 import { HttpService } from '@nestjs/axios'; const a = await lastValueFrom(this.httpService.get(url)); console.log(a.data);]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Yarn 개발 환경구축</title><link href="http://localhost:4000/yarn-001" rel="alternate" type="text/html" title="Yarn 개발 환경구축" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/yarn-001</id><content type="html" xml:base="http://localhost:4000/yarn-001"><![CDATA[<h1 id="1-yarn-설치">1. Yarn 설치</h1>
+<hr />
+<h2 id="3-nestjsconfig로-환경변수-호출">3) @nestjs/config로 환경변수 호출</h2>
+<p>app.module.ts 에 config모듈을 import<br />
+validationSchema 를 통해 문법을 검사</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { ConfigModule } from '@nestjs/config';
+import * as Joi from 'joi';
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>imports: [
+	ConfigModule.forRoot({
+		isGlobal: true,
+		envFilePath: process.env.NODE_ENV === 'dev' ? '.env.dev' : '.env.test',
+		ignoreEnvFile: process.env.NODE_ENV === 'prod',
+		validationSchema: Joi.object({
+			NODE_ENV: Joi.string().valid('dev', 'prod').required(),
+			DB_HOST: Joi.string().required(),
+			DB_PORT: Joi.string().required(),
+			DB_USERNAME: Joi.string().required(),
+			DB_PASSWORD: Joi.string().required(),
+			DB_SID: Joi.string().required(),
+		}),
+    }),
+]
+</code></pre></div></div>
+<p>최상위 디렉토리에 .env.dev 파일생성</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DB_HOST=IP
+DB_PORT=포트
+DB_USERNAME=계정
+DB_PASSWORD=비밀번호
+DB_SID=sid
+</code></pre></div></div>
+<hr />
+<h2 id="4-생성한-환경설정-적용">4) 생성한 환경설정 적용</h2>
+<p>예제로 데이터베이스 설정 항목들을 외부환경설정에거 가져옴</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TypeOrmModule.forRoot({
+	type: 'oracle',
+
+	host: process.env.DB_HOST,
+	port: +process.env.DB_PORT,
+	username: process.env.DB_USERNAME,
+	password: process.env.DB_PASSWORD,
+	sid: process.env.DB_SID,
+	
+	entities: [cm_dsplist_act, CtCtlproc, AiFlashcd],
+	synchronize: false,
+	// logging: true,
+}),
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[3. 외부환경파일 1) 설치 @nestjs/config : 설정 파일을 외부에서 가져오기 위한 nestjs에서 제공되는 모듈 cross-env : os에 종속되지 않고, 플랫폼 표준화를 하기위해 필요한 라이브러리 joi : 형식에 대한 유효성 검사]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Yarn 개발 환경구축</title><link href="http://localhost:4000/yarn-001" rel="alternate" type="text/html" title="Yarn 개발 환경구축" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/yarn-001</id><content type="html" xml:base="http://localhost:4000/yarn-001"><![CDATA[<h1 id="1-yarn-설치">1. Yarn 설치</h1>
 <p>nodejs 설치시 자동으로 설치됨 (https://nodejs.org/ko/)</p>
 
 <h1 id="2-yarn-모듈추가">2. Yarn 모듈추가</h1>
@@ -682,211 +944,4 @@ main에 기본 로거를 대체했기에 기본로거를 쓰듯이 쓰면됨</p>
 ) {}
 </code></pre></div></div>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.logger.log('ttt');
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[4. 로그 1) 설치 yarn add nest-winston yarn add winston yarn add winston-daily-rotate-file 2) 설정 로그레벨은 아래와 같다 { error: 0, warn: 1, info: 2, http: 3, verbose: 4, debug: 5, silly: 6 } 아래처럼 main.ts에 로그저장형태와 로그레벨 등을 설정한다 import { utilities, WinstonModule } from 'nest-winston'; import { format, transports } from 'winston'; import 'winston-daily-rotate-file'; ``` const app = await NestFactory.create(AppModule, { logger: WinstonModule.createLogger({ transports: [ new transports.DailyRotateFile({ level: process.env.NODE_ENV === ‘dev’ ? ‘info’ : ‘silly’, format: format.combine( format.timestamp({ format: ‘YYYY-MM-DD HH:mm:ss’, }), format.printf( (info) =&gt; [${info.timestamp}] ${process.env.APP_ENV}.${info.level}: ${info.message}, ), ), filename: ‘logs/%DATE%.log’, datePattern: ‘YYYY-MM-DD’, zippedArchive: true, maxSize: ‘20m’, maxFiles: ‘14d’, }),]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 3. 외부환경파일</title><link href="http://localhost:4000/nest-003" rel="alternate" type="text/html" title="Nestjs - 3. 외부환경파일" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>http://localhost:4000/nest-003</id><content type="html" xml:base="http://localhost:4000/nest-003"><![CDATA[<h1 id="3-외부환경파일">3. 외부환경파일</h1>
-<hr />
-<h2 id="1-설치">1) 설치</h2>
-<ul>
-  <li>@nestjs/config : 설정 파일을 외부에서 가져오기 위한 nestjs에서 제공되는 모듈</li>
-  <li>cross-env : os에 종속되지 않고, 플랫폼 표준화를 하기위해 필요한 라이브러리</li>
-  <li>joi : 형식에 대한 유효성 검사</li>
-</ul>
-
-<p>아래와같이 설치한다</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @nestjs/config 
-yarn add cross-env 
-yarn add joi
-</code></pre></div></div>
-<hr />
-<h2 id="2-cross-env로-환경변수-주입">2) cross-env로 환경변수 주입</h2>
-<p>package.json에 cross-env NODE_ENV=실행환경 추가</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"start:dev": "cross-env NODE_ENV=dev nest start --watch",
-"start:prod": "cross-env NODE_ENV=prod node dist/main",
-</code></pre></div></div>
-<hr />
-<h2 id="3-nestjsconfig로-환경변수-호출">3) @nestjs/config로 환경변수 호출</h2>
-<p>app.module.ts 에 config모듈을 import<br />
-validationSchema 를 통해 문법을 검사</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { ConfigModule } from '@nestjs/config';
-import * as Joi from 'joi';
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>imports: [
-	ConfigModule.forRoot({
-		isGlobal: true,
-		envFilePath: process.env.NODE_ENV === 'dev' ? '.env.dev' : '.env.test',
-		ignoreEnvFile: process.env.NODE_ENV === 'prod',
-		validationSchema: Joi.object({
-			NODE_ENV: Joi.string().valid('dev', 'prod').required(),
-			DB_HOST: Joi.string().required(),
-			DB_PORT: Joi.string().required(),
-			DB_USERNAME: Joi.string().required(),
-			DB_PASSWORD: Joi.string().required(),
-			DB_SID: Joi.string().required(),
-		}),
-    }),
-]
-</code></pre></div></div>
-<p>최상위 디렉토리에 .env.dev 파일생성</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DB_HOST=IP
-DB_PORT=포트
-DB_USERNAME=계정
-DB_PASSWORD=비밀번호
-DB_SID=sid
-</code></pre></div></div>
-<hr />
-<h2 id="4-생성한-환경설정-적용">4) 생성한 환경설정 적용</h2>
-<p>예제로 데이터베이스 설정 항목들을 외부환경설정에거 가져옴</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TypeOrmModule.forRoot({
-	type: 'oracle',
-
-	host: process.env.DB_HOST,
-	port: +process.env.DB_PORT,
-	username: process.env.DB_USERNAME,
-	password: process.env.DB_PASSWORD,
-	sid: process.env.DB_SID,
-	
-	entities: [cm_dsplist_act, CtCtlproc, AiFlashcd],
-	synchronize: false,
-	// logging: true,
-}),
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[3. 외부환경파일 1) 설치 @nestjs/config : 설정 파일을 외부에서 가져오기 위한 nestjs에서 제공되는 모듈 cross-env : os에 종속되지 않고, 플랫폼 표준화를 하기위해 필요한 라이브러리 joi : 형식에 대한 유효성 검사]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nestjs - 2. 데이터베이스</title><link href="http://localhost:4000/nest-002" rel="alternate" type="text/html" title="Nestjs - 2. 데이터베이스" /><published>2022-06-09T00:00:00+09:00</published><updated>2022-06-09T00:00:00+09:00</updated><id>http://localhost:4000/nest-002</id><content type="html" xml:base="http://localhost:4000/nest-002"><![CDATA[<h1 id="2-데이터베이스-오라클-기준">2. 데이터베이스 (오라클 기준)</h1>
-<hr />
-<h2 id="1-typeorm-설치">1) TypeORM 설치</h2>
-<p>오라클 연결시 Oracle Client 설치가 필요하다 
-(https://www.oracle.com/kr/database/technologies/instant-client/downloads.html)
-그후 아래와 같이 typeORM을 다운로드한다</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add oracledb
-yarn add @nestjs/typeorm typeorm oracle
-</code></pre></div></div>
-<p>설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다</p>
-
-<p>포스트그래스시</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add pg
-yarn add @nestjs/typeorm typeorm postgres
-</code></pre></div></div>
-
-<hr />
-<h2 id="2-데이터베이스-접속정보-설정">2) 데이터베이스 접속정보 설정</h2>
-<p>app.module.ts에 접속할 데이터베이스정보를 입력한다</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>imports: [
-	TypeOrmModule.forRoot({
-		type: 'oracle',
-		host: '아이피',
-		port: 포트,
-		username: '로그인ID',
-		password: '로그인PW',
-		//database: 'ServiceName',
-		sid: 'SID',
-		entities: [엔티티목록],
-		synchronize: false,
-		//logging: true,
-	}),
-	TypeOrmModule.forFeature([엔티티목록]),
-],
-</code></pre></div></div>
-<p>접속정보 옵션설정시 synchronize를 true 잡으면 기존에 구축된 데이터베이스에 변형이 가해진다
-그러므로 항상 false를 기본으로 삼고 프로토타입모델에만 true로 설정한다</p>
-
-<hr />
-<h2 id="3-엔티티-구축">3) 엔티티 구축</h2>
-<p>추천경로 : /src/entity/파일명(실제 테이블 소문자로 작성하길 추천).entity.ts</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { Column, Entity, PrimaryColumn } from 'typeorm';
-
-@Entity({ name: '테이블명', schema: '스카미마명' })
-export class 파스칼케이스파일명 {
-	@PrimaryColumn({ name: 'PK칼럼' }) pkcol: string;
-	@Column({ name: '일반적인칼럼' }) normalcol: string;
-}
-</code></pre></div></div>
-<p>작성된 Entity는 2)처럼 app.module.ts 에 등록되어있어야 사용할 수 있다</p>
-
-<hr />
-<h2 id="4-엔티티-활용">4) 엔티티 활용</h2>
-<p>필요한 Repository와 DataSource DI주입</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constructor(
-	@InjectRepository(엔티티명)
-	private 엔티티명Repository: Repository&lt;엔티티명&gt;,
-	private readonly dataSource: DataSource,
-) {}
-</code></pre></div></div>
-<p>Querybuilder Crud</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async get엔티티명(p: string): Promise&lt;AiFlashcd[]&gt; {
-	return await this.dataSource
-		.createQueryBuilder()
-		.select('a')
-		.from(엔티티명, 'a')
-		.where('a.컬럼명 = :id', { id: p })
-		.getMany();
-}
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async insert엔티티명(p: string): Promise&lt;void&gt; {
-	await this.dataSource
-		.createQueryBuilder()
-		.insert()
-		.into(엔티티명)
-		.values({
-			컬럼명: p,
-			컬럼명: () =&gt; 'SYSDATE',
-		})
-		.execute();
-}
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async update엔티티명(p: string): Promise&lt;void&gt; {
-	await this.dataSource
-		.createQueryBuilder()
-		.update(엔티티명)
-		.set({ 컬럼명: p + 1 })
-		.where({ 컬럼명: p })
-		.execute();
-}
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async delete엔티티명(p: string): Promise&lt;void&gt; {
-	await this.dataSource
-		.createQueryBuilder()
-		.delete()
-		.from(엔티티명)
-		.where({ 컬럼명: p })
-		.execute();
-}
-</code></pre></div></div>
-<p>Repository Crud</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async get엔티티명(p: string): Promise&lt;엔티티명[]&gt; {
-	return this.엔티티명Repository.find();
-}
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async insert엔티티명(p: string): Promise&lt;void&gt; {
-	await this.엔티티명Repository.save({
-		컬럼명: p,
-		컬럼명: new Date(),
-	});
-}
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async update엔티티명(p: string): Promise&lt;void&gt; {
-	this.엔티티명Repository.update(
-		{ 컬럼명: p },
-		{
-			컬럼명: p + 1,
-		},
-	);
-}
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async delete엔티티명(p: string): Promise&lt;void&gt; {
-	await this.엔티티명Repository.delete({ 컬럼명: In([p]) });
-}
-</code></pre></div></div>
-
-<hr />
-<h2 id="5-트랜잭션">5) 트랜잭션</h2>
-<p>아래와 같이 구성할대 에러처리시 Rollback이 발생한다</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>async deleteAndInsert엔티티명(p: string): Promise&lt;void&gt; {
-	await this.dataSource.manager.transaction(async (a) =&gt; {
-		await a.getRepository(엔티티명).delete({ 
-			컬럼명: In([p]) 
-		});
-		throw new Error('ddd');
-		await a.getRepository(엔티티명).save({
-			컬럼명: p + 1,
-		});
-	});
-}
-</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[2. 데이터베이스 (오라클 기준) 1) TypeORM 설치 오라클 연결시 Oracle Client 설치가 필요하다 (https://www.oracle.com/kr/database/technologies/instant-client/downloads.html) 그후 아래와 같이 typeORM을 다운로드한다 yarn add oracledb yarn add @nestjs/typeorm typeorm oracle 설치시 문제가 발생한다면 yarn 및 npm 버전업그레이드를 고려해본다]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</code></pre></div></div>]]></content><author><name>zaimy</name></author><category term="development" /><category term="nestjs" /><summary type="html"><![CDATA[4. 로그 1) 설치 yarn add nest-winston yarn add winston yarn add winston-daily-rotate-file 2) 설정 로그레벨은 아래와 같다 { error: 0, warn: 1, info: 2, http: 3, verbose: 4, debug: 5, silly: 6 } 아래처럼 main.ts에 로그저장형태와 로그레벨 등을 설정한다 import { utilities, WinstonModule } from 'nest-winston'; import { format, transports } from 'winston'; import 'winston-daily-rotate-file'; ``` const app = await NestFactory.create(AppModule, { logger: WinstonModule.createLogger({ transports: [ new transports.DailyRotateFile({ level: process.env.NODE_ENV === ‘dev’ ? ‘info’ : ‘silly’, format: format.combine( format.timestamp({ format: ‘YYYY-MM-DD HH:mm:ss’, }), format.printf( (info) =&gt; [${info.timestamp}] ${process.env.APP_ENV}.${info.level}: ${info.message}, ), ), filename: ‘logs/%DATE%.log’, datePattern: ‘YYYY-MM-DD’, zippedArchive: true, maxSize: ‘20m’, maxFiles: ‘14d’, }),]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nest_logo.png" /><media:content medium="image" url="http://localhost:4000/nest_logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
