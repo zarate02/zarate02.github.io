@@ -7,6 +7,33 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Nestjs - 9. 마이크로서비스</title>
+				
+					<dc:creator>zaimy</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;8-마이크로서비스&quot;&gt;8. 마이크로서비스&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-설치&quot;&gt;1) 설치&lt;/h2&gt;
+&lt;p&gt;AMQP 방식 사용&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add @nestjs/microservices
+yarn add amqplib
+yarn add amqp-connection-manager
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;2-활용&quot;&gt;2) 활용&lt;/h2&gt;
+&lt;figure style=&quot;text-align:center&quot;&gt;
+    &lt;img src=&quot;assets/img/nest00901.JPG&quot; style=&quot;width: 300px; height: 150px&quot; /&gt;
+    &lt;font color=&quot;gray&quot;&gt;구성도&lt;/font&gt; 
+&lt;/figure&gt;
+</description>
+				
+				<pubDate>Tue, 21 Jun 2022 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/nest-009</link>
+				<guid isPermaLink="true">http://localhost:4000/nest-009</guid>
+			</item>
+		
+			<item>
 				<title>투자 - 효성TNC</title>
 				
 					<dc:creator>zaimy</dc:creator>
@@ -232,27 +259,6 @@ const app = await NestFactory.create(AppModule, {
 				<pubDate>Fri, 10 Jun 2022 00:00:00 +0900</pubDate>
 				<link>http://localhost:4000/nest-004</link>
 				<guid isPermaLink="true">http://localhost:4000/nest-004</guid>
-			</item>
-		
-			<item>
-				<title>Nestjs - 3. 외부환경파일</title>
-				
-					<dc:creator>zaimy</dc:creator>
-				
-				
-					<description>&lt;h1 id=&quot;3-외부환경파일&quot;&gt;3. 외부환경파일&lt;/h1&gt;
-&lt;hr /&gt;
-&lt;h2 id=&quot;1-설치&quot;&gt;1) 설치&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;@nestjs/config : 설정 파일을 외부에서 가져오기 위한 nestjs에서 제공되는 모듈&lt;/li&gt;
-  &lt;li&gt;cross-env : os에 종속되지 않고, 플랫폼 표준화를 하기위해 필요한 라이브러리&lt;/li&gt;
-  &lt;li&gt;joi : 형식에 대한 유효성 검사&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-				
-				<pubDate>Fri, 10 Jun 2022 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/nest-003</link>
-				<guid isPermaLink="true">http://localhost:4000/nest-003</guid>
 			</item>
 		
 	</channel>
