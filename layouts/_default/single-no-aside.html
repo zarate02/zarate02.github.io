@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- partial "content/breadcrumb.html" . -}}
+<br />
 
 <div class="gap-6 mb-14">
     <article class="prose">
@@ -8,39 +8,39 @@
 
             <h1 id="title" class="text-4xl font-bold leading-normal">{{ .Title }}</h1>
 
-            <div id="lead" class="my-6">
+<!--            <div id="lead" class="my-6">-->
 
-                <p class="font-bold">{{ .Params.description }} </p>
+<!--                <p class="font-bold">{{ .Params.description }} </p>-->
 
-            </div>
+<!--            </div>-->
 
-            <div id="writer" class="flex items-center space-x-4">
+<!--            <div id="writer" class="flex items-center space-x-4">-->
 
-                {{- $name := .Site.Params.Author.name -}}
+<!--                {{- $name := .Site.Params.Author.name -}}-->
 
-                {{- with $avatar := resources.Get .Site.Params.Author.avatar }}
+<!--                {{- with $avatar := resources.Get .Site.Params.Author.avatar }}-->
 
-                <img class="w-12 h-12 bg-black rounded-full" src="{{ $avatar.Permalink }}" alt="{{ $name }} avatar" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}">
+<!--                <img class="w-12 h-12 bg-black rounded-full" src="{{ $avatar.Permalink }}" alt="{{ $name }} avatar" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}">-->
 
-                {{ end -}}
+<!--                {{ end -}}-->
 
-                <ul class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+<!--                <ul class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">-->
 
-                    <li class="font-semibold my-2">{{ .Site.Params.Author.name }}</li>
+<!--                    <li class="font-semibold my-2">{{ .Site.Params.Author.name }}</li>-->
 
-                    <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
-                        {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
-                        {{- $dateHuman := .Date | time.Format ":date_long" -}}
-                        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-                    </li>
+<!--                    <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">-->
+<!--                        {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}-->
+<!--                        {{- $dateHuman := .Date | time.Format ":date_long" -}}-->
+<!--                        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>-->
+<!--                    </li>-->
 
-                    <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
-                        {{ .ReadingTime }} min read
-                    </li>
+<!--                    <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">-->
+<!--                        {{ .ReadingTime }} min read-->
+<!--                    </li>-->
 
-                </ul>
+<!--                </ul>-->
 
-            </div>
+<!--            </div>-->
 
         </header>
 

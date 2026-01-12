@@ -6,16 +6,29 @@
 
   <section class="md:col-span-2">
 
-    <h2 class="text-3xl font-bold mb-10">{{ .Title | humanize }}</h2>
+    <h1 class="text-3xl font-bold mb-6">{{ .Title | humanize }}</h1>
+
+      {{ if .Sections }}
+      <div class="mb-6">
+          <div class="flex flex-wrap"> {{ range .Sections }}
+              <a href="{{ .Permalink }}" class="group flex items-center text-zinc-400 hover:text-black transition-colors" style="margin-right: 10px !important;">
+                  <span class="text-lg font-bold tracking-tight">{{ .Title }}</span>
+                  <span class="ml-1.5 text-xs font-medium opacity-50">({{ len .RegularPagesRecursive }})</span>
+              </a>
+              {{ end }}
+          </div>
+      </div>
+      {{ end }}
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-4">
 
-      {{ range ( .Paginator 6 ).Pages }}
-      
+        {{ $paginator := .Paginate .RegularPagesRecursive 6 }}
+        {{ range $paginator.Pages }}
+
         {{- partial "content/card.html" . -}}
 
       {{ end }}
-    
+
     </div>
 
     <!-- Paginate here -->
@@ -29,13 +42,13 @@
         <a class="border rounded-full px-6 py-2 hover:bg-zinc-200" href="{{ .Paginator.Next.URL }}">Next →</a>
       {{- end -}}
     </div>
-  
+
   </section>
 
   <aside class="md:col-span-1">
 
     {{- partial "content/aside.html" . -}}
-    
+
   </aside>
 
   </div>

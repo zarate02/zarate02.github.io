@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: 2023-10-06T20:37:29+07:00
+date: 2026-01-12
 draft: false
 layout: single-no-aside
 ---

@@ -35,17 +35,13 @@ disqusShortname = 'https-zarate02-github-io' # <- Get form here : https://disqus
 		pageRef = '/'
 		weight = 20
 	[[menu.main]]
-		name = 'Log'
-		pageRef = '/'
-		weight = 25
-	[[menu.main]]
 		name = 'Tags'
 		pageRef = '/tags'
-		weight = 30
+		weight = 25
 	[[menu.main]]
 		name = 'About'
 		pageRef = '/about'
-		weight = 35
+		weight = 30
 
 [module]
   [module.hugoVersion]
@@ -62,3 +58,5 @@ disqusShortname = 'https-zarate02-github-io' # <- Get form here : https://disqus
 
 [outputs]
     home = ["HTML", "RSS", "JSON"]
+    section = ["HTML"]              # 섹션에서는 제거
+    page = ["HTML"]                 # 페이지에서도 제거

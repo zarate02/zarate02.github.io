@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- partial "content/breadcrumb.html" . -}}
+<br />
 
 <div class="gap-6 mb-14">
     <article class="prose">
@@ -86,9 +86,9 @@
 
                 <h2 class="text-xl font-semibold">Comment</h2>
 
-                <p>Disqus comment here</p>
+                <!--                <p>Disqus comment here</p>-->
 
-                {{- /* template "_internal/disqus.html" . */ -}}
+                {{- template "_internal/disqus.html" . -}}
 
             </div>
 

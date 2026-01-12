@@ -1,7 +1,7 @@
 <div id="breadcrumb" class="max-w-7xl mx-auto py-8">
 	<ul class="flex space-x-4 text-sm text-zinc-500">
 		{{- range .Ancestors.Reverse }}
-		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none">
 			<a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
 		</li>
 		{{- end }}
