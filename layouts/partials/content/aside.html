@@ -4,13 +4,16 @@
 
 	<div class="space-y-6">
 
-		<h2 class="font-bold text-xl mb-8">Recent Post</h2>
+		<h2 class="font-bold text-xl mb-8">Recommended Post</h2>
 
-		{{ range where .Site.RegularPages "Type" "posts" | first 5}}
+        {{- $related := .Site.RegularPages.Related . | first 2 -}}
+        {{- with $related -}}
 
-			{{- partial "content/list-post.html" . -}}
+        {{- range . }}
+            {{- partial "content/list-post.html" . -}}
+        {{ end }}
 
-		{{ end }}
+        {{- end }}
 		
 	</div>
 

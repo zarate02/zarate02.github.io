@@ -10,11 +10,11 @@ disqusShortname = 'https-zarate02-github-io' # <- Get form here : https://disqus
 [params]
 	# Meta description, not exceeding 160 characters, used for the meta description within the HTML head
 	description = 'Pehtheme Hugo Lite: A minimalist Hugo theme, built with TailwindCSS, for efficient performance and minimalism.'
-	mainSections = 'posts'
+	mainSections = ['devops', 'anime']
 
 	[params.author]
 		name = 'hpyYh'
-		bio = 'for happiness! for technology!'
+#		bio = 'for happiness! for technology!'
 		avatar = '/images/profile.png'
 		twitter = 'https://twitter.com/insertapps'
 
@@ -23,25 +23,21 @@ disqusShortname = 'https-zarate02-github-io' # <- Get form here : https://disqus
 
 [menu] # Menu management
 	[[menu.main]]
-		name = 'All'
-		pageRef = '/'
+		name = 'DevOps'
+		pageRef = '/devops'
 		weight = 10
 	[[menu.main]]
-		name = 'DevOps'
-		pageRef = '/'
-		weight = 15
-	[[menu.main]]
 		name = 'Anime'
-		pageRef = '/'
-		weight = 20
+		pageRef = '/anime'
+		weight = 15
 	[[menu.main]]
 		name = 'Tags'
 		pageRef = '/tags'
-		weight = 25
+		weight = 20
 	[[menu.main]]
 		name = 'About'
 		pageRef = '/about'
-		weight = 30
+		weight = 25
 
 [module]
   [module.hugoVersion]
@@ -60,3 +56,13 @@ disqusShortname = 'https-zarate02-github-io' # <- Get form here : https://disqus
     home = ["HTML", "RSS", "JSON"]
     section = ["HTML"]              # 섹션에서는 제거
     page = ["HTML"]                 # 페이지에서도 제거
+
+[related]
+    includeNewer = true
+    threshold    = 20
+    [[related.indices]]
+        name = "tags"
+        weight = 100
+    [[related.indices]]
+        name = "categories"
+        weight = 80

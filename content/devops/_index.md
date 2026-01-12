@@ -1,4 +1,4 @@
 ---
-title: "2026 "
+title: "DevOps"
 date: 2026-01-01
 ---
