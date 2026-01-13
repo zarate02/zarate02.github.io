@@ -54,9 +54,9 @@ disqusShortname = 'https-zarate02-github-io' # <- Get form here : https://disqus
 			unsafe = true
 
 [outputs]
-    home = ["HTML", "RSS", "JSON"]
-    section = ["HTML"]              # 섹션에서는 제거
-    page = ["HTML"]                 # 페이지에서도 제거
+    home = ["HTML", "RSS", "JSON", "SITEMAP"]
+    section = ["HTML", "SITEMAP"]              # 섹션에서는 제거
+    page = ["HTML", "SITEMAP"]                 # 페이지에서도 제거
 
 [related]
     includeNewer = true
