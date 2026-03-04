@@ -9,7 +9,7 @@
              src="{{ .Params.image }}" alt="{{ $.Name }}">
         {{- else }}
         {{- with $imgcard := resources.Get .Params.image -}}
-        {{- $imgcard := $imgcard.Fill "750x422" -}}
+        {{- $imgcard := $imgcard.Fill "1500x844" -}}
         <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500 cursor-pointer"
              src="{{ $imgcard.Permalink }}"
              alt="{{ $.Name }}"

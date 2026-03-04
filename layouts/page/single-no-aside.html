@@ -55,7 +55,7 @@
             {{- else }}
 
             {{- with $image := resources.Get .Params.image }}
-            {{- $image := $image.Resize "750x" }}
+            {{- $image := $image }}
             <img class="rounded-lg" src="{{ $image.Permalink }}" alt="{{ .Params.title }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
             {{- end }}
 

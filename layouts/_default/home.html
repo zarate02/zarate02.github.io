@@ -12,7 +12,7 @@
              src="{{ .Params.image }}" alt="{{ $.Name }}">
         {{- else }}
         {{- with $imgfeature := resources.Get .Params.image }}
-        {{ $imgfeature := $imgfeature.Fill "720x405 Q85" -}}
+        {{ $imgfeature := $imgfeature -}}
         <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500 cursor-pointer"
              src="{{ $imgfeature.Permalink }}"
              alt="{{ $.Name }}"

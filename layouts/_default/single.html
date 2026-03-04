@@ -56,8 +56,8 @@
         {{- else }}
 
           {{- with $image := resources.Get .Params.image }}
-            {{- $image := $image.Resize "750x" }}
-            <img class="rounded-lg" src="{{ $image.Permalink }}" alt="{{ .Params.title }}" width="740" height="430">
+            {{- $image := $image}}
+            <img class="rounded-lg" src="{{ $image.Permalink }}" alt="{{ .Params.title }}">
           {{- end }}
 
         {{- end }}
@@ -67,6 +67,26 @@
       {{- if ( isset .Params "caption" ) }}
         <figcaption class="text-center italic text-xs">{{ .Params.caption }}</figcaption>
       {{- end }}
+
+      {{- if (isset .Params "star") -}}
+        <figcaption class="text-center text-xs">
+            {{- $rating := float .Params.star -}}
+            {{- $fullStars := int (math.Floor $rating) -}}
+            {{- $hasHalf := ge (sub $rating (float $fullStars)) 0.5 -}}
+
+            {{- /* 꽉 찬 별 출력 */ -}}
+            {{- if gt $fullStars 0 -}}
+            {{- range seq $fullStars -}}
+            <span class="star-full"><img src="/images/s1.png" width="30" style="display: inline; margin: 0; vertical-align: middle;"/></span>
+            {{- end -}}
+            {{- end -}}
+
+            {{- /* 반 별 출력 */ -}}
+            {{- if $hasHalf -}}
+            <span class="star-half"><img src="/images/s0.png" width="30" style="display: inline; margin: 0; vertical-align: middle;"/></span>
+            {{- end -}}
+        </figcaption>
+      {{- end -}}
 
     </figure>
 
